@@ -8,7 +8,7 @@ function classNames(...classes) {
 }
 
 export default function Holoride() {
-  let [isOpen, setIsOpen] = useState(true)
+  let [isOpen, setIsOpen] = useState(false)
 
   function closeModal() {
     setIsOpen(false)
@@ -261,7 +261,7 @@ export default function Holoride() {
                       leaveFrom="opacity-100 scale-100"
                       leaveTo="opacity-0 scale-95"
                     >
-                      <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+                      <div className="inline-block w-full max-w-2xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
                         <div className="flex justify-between">
                           <div>
                             Eligibility
@@ -270,7 +270,57 @@ export default function Holoride() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                           </svg>
                         </div>
-                        <div>
+                        <div className="mt-8 ">
+                          <table className=" rounded-lg bg-blue-700 w-full">
+                            <thead className="h-20 text-white">
+                              <tr>
+                                <th className="p-5">Tier</th>
+                                <th>EGLD <br/>Staked/delegated</th>
+                                <th>Max. No. of Tickets <br/> per User</th>
+                                <th>Max Amount per <br/>User ($)</th>
+                              </tr>
+                            </thead>
+                            <tbody className="bg-white">
+                              <tr>
+                                <td className="p-5">Tier 5</td>
+                                <td>&gt;= 1 EGLD</td>
+                                <td>1</td>
+                                <td>$200</td>
+                              </tr>
+
+                              <tr>
+                                <td className="p-5">Tier 5</td>
+                                <td>&gt;= 1 EGLD</td>
+                                <td>1</td>
+                                <td>$200</td>
+                              </tr>
+
+                              <tr>
+                                <td className="p-5">Tier 5</td>
+                                <td>&gt;= 1 EGLD</td>
+                                <td>1</td>
+                                <td>$200</td>
+                              </tr>
+
+                              <tr>
+                                <td className="p-5">Tier 5</td>
+                                <td>&gt;= 1 EGLD</td>
+                                <td>1</td>
+                                <td>$200</td>
+                              </tr>
+
+                              <tr>
+                                <td className="p-5">Tier 5</td>
+                                <td>&gt;= 1 EGLD</td>
+                                <td>1</td>
+                                <td>$200</td>
+                              </tr>
+                             
+                            </tbody>
+                          </table>
+                        </div>
+                        <div className="my-5">
+                          Price per ticket: $200(paid in EGLD)
                         </div>
                         
                       </div>
@@ -298,9 +348,50 @@ export default function Holoride() {
             <div className="text-holoride text-gray-600">
               Launchpad Timeline
             </div>
-            <div className="mt-5">
-              <div className="rounded-full p-1.5 bg-blue-700 inline-block"></div>
-              <div className="pl-2 inline-block">4 November</div>
+            <div className="mt-5 flex justify-start items-start">
+              <div className="rounded-full p-1.5 border-2 border-blue-700 bg-blue-700 mt-2"></div>
+              <div>
+                <div className="pl-2 text-lg">4 November</div>
+                <div className="pl-2 text-sm">Registration & KYC begins</div>
+              </div>
+            </div>
+
+            <div className="mt-5 flex justify-start items-start">
+              <div className="rounded-full p-1.5 border-2 border-blue-700 mt-2"></div>
+              <div>
+                <div className="pl-2 text-lg">22 November</div>
+                <div className="pl-2 text-sm">
+                  KYC closed<br/>
+                  EGLD Staking snapshot
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-5 flex justify-start items-start">
+              <div className="rounded-full p-1.5 border-2 border-blue-700 mt-2"></div>
+              <div>
+                <div className="pl-2 text-lg">24 November</div>
+                <div className="pl-2 text-sm">Buy lottery tickets</div>
+              </div>
+            </div>
+
+            <div className="mt-5 flex justify-start items-start">
+              <div className="rounded-full p-1.5 border-2 border-blue-700 mt-2"></div>
+              <div>
+                <div className="pl-2 text-lg">25 November</div>
+                <div className="pl-2 text-sm">Announce Winning tickets</div>
+              </div>
+            </div>
+
+            <div className="mt-5 flex justify-start items-start">
+              <div className="rounded-full p-1.5 border-2 border-blue-700 mt-2"></div>
+              <div>
+                <div className="pl-2 text-lg">26 November</div>
+                <div className="pl-2 text-sm">
+                  Winners claim RIDE tokens<br/>
+                  All participants claim unspent EGLD
+                </div>
+              </div>
             </div>
           </div>
           
