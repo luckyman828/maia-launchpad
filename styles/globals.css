@@ -23,6 +23,15 @@
     left: 40%;
 }
 
+.text-holoride {
+    font-size: 1.3125rem;
+    line-height: 1.75rem;
+}
+
+.tab-holoride {
+    margin-top: -117px;
+}
+
 @media (max-width: 1024px) {
 
     .absolute-center-bottom {
