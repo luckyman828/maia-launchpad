@@ -180,118 +180,133 @@ export default function Holoride() {
         </div>
       </div>
 
-      <div className="lg:w-3/12 md:w-full inline-block	lg:absolute mx-3 bg-gray-50 border-r-2 border-l-2 border-b-2 rounded-md shadow-2xl">
-        <div className="container mx-auto px-1 border-b-2">
-          <div className="shadow-lg">
-            <img className="w-full round-md" src="./assets/img/announcement.jpg" alt="Cover image"  />
-          </div>
-        </div>
-        <div className="container mx-auto px-3 border-b-2">
-          <div className="text-center text-gray-500 mt-8">
-            <div className="text-sm">
-              Offered tokens
-            </div>
-            <div className="text-lg">
-              50,000,000 RIDE
+      <div className="lg:w-3/12 md:w-full inline-block	lg:absolute mx-3 ">
+        <div className="bg-gray-50 border-r-2 border-l-2 border-b-2 rounded-md shadow-2xl">
+          <div className="container mx-auto px-1 border-b-2">
+            <div className="shadow-lg">
+              <img className="w-full round-md" src="./assets/img/announcement.jpg" alt="Cover image"  />
             </div>
           </div>
-          <div className="text-center text-gray-500 mt-5">
-            <div className="text-sm">
-              Raised in Public Sale
+          <div className="container mx-auto px-3 border-b-2">
+            <div className="text-center text-gray-500 mt-8">
+              <div className="text-sm">
+                Offered tokens
+              </div>
+              <div className="text-lg">
+                50,000,000 RIDE
+              </div>
             </div>
-            <div className="text-lg">
-              $2,000,000 USD
+            <div className="text-center text-gray-500 mt-5">
+              <div className="text-sm">
+                Raised in Public Sale
+              </div>
+              <div className="text-lg">
+                $2,000,000 USD
+              </div>
             </div>
-          </div>
-          <div className="text-center text-gray-500 mt-5">
-            <div className="text-sm">
-              Price per Token
+            <div className="text-center text-gray-500 mt-5">
+              <div className="text-sm">
+                Price per Token
+              </div>
+              <div className="text-lg">
+                $0.04 USD
+              </div>
             </div>
-            <div className="text-lg">
-              $0.04 USD
-            </div>
-          </div>
-          <div className="mb-8">
-            <div className="flex items-center justify-center mt-5">
-              <button
-                type="button"
-                onClick={openModal}
-                className="w-full flex items-center justify-center rounded-md border-2 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-              >
-                
-                    <img className="block h-8 w-3 mr-3" src="../assets/img/eligibility.svg" alt="logo"/>
-                    Eligibility Tiers
-                
-              </button>
-            </div>
+            <div className="mb-8">
+              <div className="flex items-center justify-center mt-5">
+                <button
+                  type="button"
+                  onClick={openModal}
+                  className="w-full flex items-center justify-center rounded-md border-2 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+                >
+                  
+                      <img className="block h-8 w-3 mr-3" src="../assets/img/eligibility.svg" alt="logo"/>
+                      Eligibility Tiers
+                  
+                </button>
+              </div>
 
-            <Transition appear show={isOpen} as={Fragment}>
-              <Dialog
-                as="div"
-                className="fixed inset-0 z-10 overflow-y-auto"
-                onClose={closeModal}
-              >
-                <div className="min-h-screen px-4 text-center">
-                  <Transition.Child
-                    as={Fragment}
-                    enter="ease-out duration-300"
-                    enterFrom="opacity-0"
-                    enterTo="opacity-100"
-                    leave="ease-in duration-200"
-                    leaveFrom="opacity-100"
-                    leaveTo="opacity-0"
-                  >
-                    <Dialog.Overlay className="fixed inset-0" />
-                  </Transition.Child>
+              <Transition appear show={isOpen} as={Fragment}>
+                <Dialog
+                  as="div"
+                  className="fixed inset-0 z-10 overflow-y-auto"
+                  onClose={closeModal}
+                >
+                  <div className="min-h-screen px-4 text-center">
+                    <Transition.Child
+                      as={Fragment}
+                      enter="ease-out duration-300"
+                      enterFrom="opacity-0"
+                      enterTo="opacity-100"
+                      leave="ease-in duration-200"
+                      leaveFrom="opacity-100"
+                      leaveTo="opacity-0"
+                    >
+                      <Dialog.Overlay className="fixed inset-0" />
+                    </Transition.Child>
 
-                  {/* This element is to trick the browser into centering the modal contents. */}
-                  <span
-                    className="inline-block h-screen align-middle"
-                    aria-hidden="true"
-                  >
-                    &#8203;
-                  </span>
-                  <Transition.Child
-                    as={Fragment}
-                    enter="ease-out duration-300"
-                    enterFrom="opacity-0 scale-95"
-                    enterTo="opacity-100 scale-100"
-                    leave="ease-in duration-200"
-                    leaveFrom="opacity-100 scale-100"
-                    leaveTo="opacity-0 scale-95"
-                  >
-                    <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
-                      <div className="flex justify-between">
-                        <div>
-                          Eligibility
+                    {/* This element is to trick the browser into centering the modal contents. */}
+                    <span
+                      className="inline-block h-screen align-middle"
+                      aria-hidden="true"
+                    >
+                      &#8203;
+                    </span>
+                    <Transition.Child
+                      as={Fragment}
+                      enter="ease-out duration-300"
+                      enterFrom="opacity-0 scale-95"
+                      enterTo="opacity-100 scale-100"
+                      leave="ease-in duration-200"
+                      leaveFrom="opacity-100 scale-100"
+                      leaveTo="opacity-0 scale-95"
+                    >
+                      <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+                        <div className="flex justify-between">
+                          <div>
+                            Eligibility
+                          </div>
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" onClick={closeModal}>
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                          </svg>
                         </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" onClick={closeModal}>
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                        </svg>
+                        <div>
+                        </div>
+                        
                       </div>
-                      <div>
-                      </div>
-                      
-                    </div>
-                  </Transition.Child>
-                </div>
-              </Dialog>
-            </Transition>
+                    </Transition.Child>
+                  </div>
+                </Dialog>
+              </Transition>
+            </div>
+          </div>
+          <div className="container mx-auto px-3 border-b-2">
+            <div className="text-center text-gray-500 mt-8 mb-2">
+              Register Now
+            </div>
+            <div className="mb-5">
+              <a href="#" className="text-sm bg-gray-100 border-2 text-gray-100 bg-blue-700 h-10 px-3 py-2 rounded-md text-xs flex items-center justify-center" aria-current="page">
+                  <img className="opacity-75 block h-8 w-3 mr-3" src="../assets/img/connect.svg" alt="logo"/>
+                  Connect
+              </a>
+            </div>
           </div>
         </div>
-        <div className="container mx-auto px-3 border-b-2">
-          <div className="text-center text-gray-500 mt-8 mb-2">
-            Register Now
+        
+        <div className="bg-gray-50 border-r-2 border-l-2 border-b-2 rounded-md shadow-2xl mt-8">
+          <div className="container px-6 py-6">
+            <div className="text-holoride text-gray-600">
+              Launchpad Timeline
+            </div>
+            <div className="mt-5">
+              <div className="rounded-full p-1.5 bg-blue-700 inline-block"></div>
+              <div className="pl-2 inline-block">4 November</div>
+            </div>
           </div>
-          <div className="mb-5">
-            <a href="#" className="text-sm bg-gray-100 border-2 text-gray-100 bg-blue-700 h-10 px-3 py-2 rounded-md text-xs flex items-center justify-center" aria-current="page">
-                <img className="opacity-75 block h-8 w-3 mr-3" src="../assets/img/connect.svg" alt="logo"/>
-                Connect
-            </a>
-          </div>
+          
         </div>
+
       </div>
-     
     </div>
   )
 }
