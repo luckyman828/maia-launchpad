@@ -61,6 +61,10 @@
         left: 31%;
     }
 
+    .footer-responsive {
+        display: block;
+    }
+
 }
 
 
