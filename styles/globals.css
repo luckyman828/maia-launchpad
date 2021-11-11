@@ -10,3 +10,53 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.absolute-center-bottom {
+    position: absolute ;
+    bottom: 9% ; 
+    left: 40%;
+}
+
+.absolute-center-top {
+    position: absolute ;
+    top: 9% ; 
+    left: 40%;
+}
+
+@media (max-width: 1024px) {
+
+    .absolute-center-bottom {
+        position: absolute ;
+        bottom: 9% ; 
+        left: 35%;
+    }
+
+    .absolute-center-top {
+        position: absolute ;
+        top: 9% ; 
+        left: 35%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .absolute-center-bottom {
+        position: absolute ;
+        bottom: 9% ; 
+        left: 31%;
+    }
+
+    .absolute-center-top {
+        position: absolute ;
+        top: 9% ; 
+        left: 31%;
+    }
+
+}
+
+
+.absolute-center-sm {
+    position: absolute; 
+    bottom: 9%;
+    left: 31%;
+}
