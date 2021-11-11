@@ -1,13 +1,22 @@
 import Link from 'next/link'
-import { useState } from 'react'
 import { Tab } from '@headlessui/react'
+import { Dialog, Transition } from '@headlessui/react'
+import { Fragment, useState } from 'react'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Holoride() {
-  
+  let [isOpen, setIsOpen] = useState(true)
+
+  function closeModal() {
+    setIsOpen(false)
+  }
+
+  function openModal() {
+    setIsOpen(true)
+  }
 
   return (
     
@@ -176,8 +185,8 @@ export default function Holoride() {
           <div className="shadow-lg">
             <img className="w-full round-md" src="./assets/img/announcement.jpg" alt="Cover image"  />
           </div>
-       </div>
-       <div className="container mx-auto px-3 border-b-2">
+        </div>
+        <div className="container mx-auto px-3 border-b-2">
           <div className="text-center text-gray-500 mt-8">
             <div className="text-sm">
               Offered tokens
@@ -202,7 +211,85 @@ export default function Holoride() {
               $0.04 USD
             </div>
           </div>
-       </div>
+          <div className="mb-8">
+            <div className="flex items-center justify-center mt-5">
+              <button
+                type="button"
+                onClick={openModal}
+                className="w-full flex items-center justify-center rounded-md border-2 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+              >
+                
+                    <img className="block h-8 w-3 mr-3" src="../assets/img/eligibility.svg" alt="logo"/>
+                    Eligibility Tiers
+                
+              </button>
+            </div>
+
+            <Transition appear show={isOpen} as={Fragment}>
+              <Dialog
+                as="div"
+                className="fixed inset-0 z-10 overflow-y-auto"
+                onClose={closeModal}
+              >
+                <div className="min-h-screen px-4 text-center">
+                  <Transition.Child
+                    as={Fragment}
+                    enter="ease-out duration-300"
+                    enterFrom="opacity-0"
+                    enterTo="opacity-100"
+                    leave="ease-in duration-200"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
+                  >
+                    <Dialog.Overlay className="fixed inset-0" />
+                  </Transition.Child>
+
+                  {/* This element is to trick the browser into centering the modal contents. */}
+                  <span
+                    className="inline-block h-screen align-middle"
+                    aria-hidden="true"
+                  >
+                    &#8203;
+                  </span>
+                  <Transition.Child
+                    as={Fragment}
+                    enter="ease-out duration-300"
+                    enterFrom="opacity-0 scale-95"
+                    enterTo="opacity-100 scale-100"
+                    leave="ease-in duration-200"
+                    leaveFrom="opacity-100 scale-100"
+                    leaveTo="opacity-0 scale-95"
+                  >
+                    <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+                      <div className="flex justify-between">
+                        <div>
+                          Eligibility
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" onClick={closeModal}>
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </div>
+                      <div>
+                      </div>
+                      
+                    </div>
+                  </Transition.Child>
+                </div>
+              </Dialog>
+            </Transition>
+          </div>
+        </div>
+        <div className="container mx-auto px-3 border-b-2">
+          <div className="text-center text-gray-500 mt-8 mb-2">
+            Register Now
+          </div>
+          <div className="mb-5">
+            <a href="#" className="text-sm bg-gray-100 border-2 text-gray-100 bg-blue-700 h-10 px-3 py-2 rounded-md text-xs flex items-center justify-center" aria-current="page">
+                <img className="opacity-75 block h-8 w-3 mr-3" src="../assets/img/connect.svg" alt="logo"/>
+                Connect
+            </a>
+          </div>
+        </div>
       </div>
      
     </div>
