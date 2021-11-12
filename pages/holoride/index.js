@@ -35,7 +35,7 @@ export default function Holoride() {
             <a href="#" className="mx-5 opacity-75 hover:bg-gray-300 rounded-full p-2.5 flex justify-center"><img className="block h-4 w-auto" src="../assets/img/twitter.svg" alt="Workflow"/></a>
             <a href="#" className="mx-5 opacity-75 hover:bg-gray-300 rounded-full p-2.5 flex justify-center"><img className="block h-4 w-auto" src="../assets/img/telegram.svg" alt="Workflow"/></a>
             <a href="#" className="mx-5 opacity-75 hover:bg-gray-300 rounded-full p-2.5 flex justify-center"><img className="block h-4 w-auto" src="../assets/img/facebook.svg" alt="Workflow"/></a>
-            <a href="#" className="mx-5 opacity-75 hover:bg-gray-300 rounded-full p-2.5 flex justify-center"><img className="block h-4 w-auto" src="../assets/img/instergram.svg" alt="Workflow"/></a>
+            <a href="#" className="mx-5 opacity-75 hover:bg-gray-300 rounded-full p-2.5 flex justify-center"><img className="block h-4 w-auto" src="../assets/img/linkedin.svg" alt="Workflow"/></a>
           </div>
         </div>
         <div className="px-10 ">

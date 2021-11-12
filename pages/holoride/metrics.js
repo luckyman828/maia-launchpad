@@ -3,6 +3,9 @@ import { Tab } from '@headlessui/react'
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import Card from '../components/holorides/Card'
+import Chart from "react-apexcharts";
+
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -17,6 +20,26 @@ export default function Metrics() {
 
   function openModal() {
     setIsOpen(true)
+  }
+
+  const chatSeries = [23, 11, 54, 72, 12]
+  // const chatLabels = ["Public Sale", "Community", "Ecosystem", "Treasury", "Equity investors"]
+  const chatOptions = {
+    chart: {
+      type: 'donut',
+    },
+    responsive: [{
+      breakpoint: 480,
+      options: {
+        chart: {
+          width: 200
+        },
+        legend: {
+          position: 'bottom'
+        },
+        labels: ["Comedy", "Action", "SciFi", "Drama", "Horror"],
+      }
+    }]
   }
 
   const member = {
@@ -375,122 +398,222 @@ export default function Metrics() {
           <div className="text-holoride text-gray-500 mt-5 mb-5">
             Roadmap
           </div>
-          <div className="mt-5 flex justify-start items-start">
-            <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
-            <div>
-              <div className="pl-2 text-lg">Q3 2021</div>
-              <div className="pl-2 text-sm flex justify-start mt-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                </svg>
-                C++ API Elrond SDK (Made by Elrond)
+          {/* road map */}
+          <div>
+            <div className="mt-5 flex justify-start items-start">
+              <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
+              <div>
+                <div className="pl-2 text-lg">Q3 2021</div>
+                <div className="pl-2 text-sm flex justify-start mt-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  C++ API Elrond SDK (Made by Elrond)
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-5 flex justify-start items-start">
+              <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
+              <div>
+                <div className="pl-2 text-lg">Q4 2021</div>
+                <div className="pl-2 text-sm flex justify-start mt-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  RIDE Token Sale and Token Generation Event
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-5 flex justify-start items-start">
+              <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
+              <div>
+                <div className="pl-2 text-lg">Q1 2022</div>
+                <div className="pl-2 text-sm flex justify-start mt-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Infrastructure Planning
+                </div>
+
+                <div className="pl-2 text-sm flex justify-start mt-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Software Integration Architecture
+                </div>
+
+              </div>
+            </div>
+
+            <div className="mt-5 flex justify-start items-start">
+              <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
+              <div>
+                <div className="pl-2 text-lg">Q2 2022</div>
+                <div className="pl-2 text-sm flex justify-start mt-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  PoC with Elrond Techstack
+                </div>
+
+                <div className="pl-2 text-sm flex justify-start mt-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Blockchain Integration in holoride App
+                </div>
+
+                <div className="pl-2 text-sm flex justify-start mt-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Blockchain Integration in Elastic SDK
+                </div>
+
+              </div>
+            </div>
+
+            <div className="mt-5 flex justify-start items-start">
+              <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
+              <div>
+                <div className="pl-2 text-lg">Q3 2022</div>
+                <div className="pl-2 text-sm flex justify-start mt-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  NFT Test Integration into holoride Experiences
+                </div>
+
+                <div className="pl-2 text-sm flex justify-start mt-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Testing of Playtime-based Features with OEMs and holoride
+                </div>
+
+                <div className="pl-2 text-sm flex justify-start mt-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Security Audits
+                </div>
+
+              </div>
+            </div>
+
+            <div className="mt-5 flex justify-start items-start">
+              <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
+              <div>
+                <div className="pl-2 text-lg">Q4 2022</div>
+                <div className="pl-2 text-sm flex justify-start mt-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Product Launch
+                </div>
               </div>
             </div>
           </div>
+          {/* end of road map */}
+          
+          <div className="text-holoride text-gray-500 mt-5 mb-5">
+            Key Metrics
+          </div>
+          <div className="mt-8 ">
+            <table className=" rounded-lg bg-blue-700 w-full">
+              <thead className="h-15 text-white">
+                <tr>
+                  <th className="p-5">Token Name</th>
+                  <th>Ride</th>
+                </tr>
+              </thead>
+              <tbody className="bg-white">
+                <tr>
+                  <td className="p-5">Max supply</td>
+                  <td>1,000,000,000 RIDE</td>
+                </tr>
 
-          <div className="mt-5 flex justify-start items-start">
-            <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
-            <div>
-              <div className="pl-2 text-lg">Q4 2021</div>
-              <div className="pl-2 text-sm flex justify-start mt-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                </svg>
-                RIDE Token Sale and Token Generation Event
-              </div>
-            </div>
+                <tr>
+                  <td className="p-5">Initial circulating supply</td>
+                  <td>130,000,000 RIDE</td>
+                </tr>
+
+                <tr>
+                  <td className="p-5">Maiar Launchpad price</td>
+                  <td>$0.04 USD / RIDE</td>
+                </tr>
+                
+              </tbody>
+            </table>
           </div>
 
-          <div className="mt-5 flex justify-start items-start">
-            <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
-            <div>
-              <div className="pl-2 text-lg">Q1 2022</div>
-              <div className="pl-2 text-sm flex justify-start mt-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                </svg>
-                Infrastructure Planning
-              </div>
+          <div className="text-holoride text-gray-500 mt-5 mb-5">
+            Token Sale
+          </div>
+          <div className="mt-8 ">
+            <table className=" rounded-lg bg-blue-700 w-full">
+              <thead className="h-15 text-white">
+                <tr>
+                  <th className="p-5"></th>
+                  <th>Tokens Sold</th>
+                  <th>Price</th>
+                  <th>Raised</th>
+                </tr>
+              </thead>
+              <tbody className="bg-white">
+                <tr>
+                  <td className="p-5">Private Sale</td>
+                  <td>200,000,000</td>
+                  <td>$0.02</td>
+                  <td>$4M USD</td>
+                </tr>
 
-              <div className="pl-2 text-sm flex justify-start mt-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                </svg>
-                Software Integration Architecture
-              </div>
-
-            </div>
+                <tr>
+                  <td className="p-5">Public Sale</td>
+                  <td>50,000,000</td>
+                  <td>$0.04</td>
+                  <td>$2M USD</td>
+                </tr>               
+                
+              </tbody>
+            </table>
           </div>
 
-          <div className="mt-5 flex justify-start items-start">
-            <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
-            <div>
-              <div className="pl-2 text-lg">Q2 2022</div>
-              <div className="pl-2 text-sm flex justify-start mt-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                </svg>
-                PoC with Elrond Techstack
-              </div>
-
-              <div className="pl-2 text-sm flex justify-start mt-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                </svg>
-                Blockchain Integration in holoride App
-              </div>
-
-              <div className="pl-2 text-sm flex justify-start mt-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                </svg>
-                Blockchain Integration in Elastic SDK
-              </div>
-
-            </div>
+          <div className="text-holoride text-gray-500 mt-5 mb-5">
+            Token Governance And Use Of Funds
           </div>
 
-          <div className="mt-5 flex justify-start items-start">
-            <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
-            <div>
-              <div className="pl-2 text-lg">Q3 2022</div>
-              <div className="pl-2 text-sm flex justify-start mt-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                </svg>
-                NFT Test Integration into holoride Experiences
-              </div>
-
-              <div className="pl-2 text-sm flex justify-start mt-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                </svg>
-                Testing of Playtime-based Features with OEMs and holoride
-              </div>
-
-              <div className="pl-2 text-sm flex justify-start mt-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                </svg>
-                Security Audits
-              </div>
-
-            </div>
-          </div>
-
-          <div className="mt-5 flex justify-start items-start">
-            <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
-            <div>
-              <div className="pl-2 text-lg">Q4 2022</div>
-              <div className="pl-2 text-sm flex justify-start mt-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                </svg>
-                Product Launch
-              </div>
-            </div>
+          <div className="text-sm text-gray-600 mt-5">
+            The holoride team plans to allocate the proceeds of the RIDE token sale as follows:
           </div>
           
+          <div className="grid grid-cols-4 gap-4 mt-5">
+              <div className="flex flex-col items-center">
+                <div className="text-lg text-blue-700">70%</div>
+                <div className="text-gray-600">Content creation</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-lg text-blue-700">12.5%</div>
+                <div className="text-gray-600">Development</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-lg text-blue-700">70%</div>
+                <div className="text-gray-600">Marketing</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-lg text-blue-700">70%</div>
+                <div className="text-gray-600">Legal & Security Audits</div>
+              </div>
+          </div>
+
+          <div className="text-sm text-gray-600 mt-5">
+          All funds are held in a multi-sig cold wallet controlled by the core team. Any movements of funds require at least 2 out of 3 signatures from the top management team.
+          </div>
+          <div className="donut">
+            <Chart options={chatOptions} series={chatSeries} type="donut" width="380"/>
+          </div>
           
           <div className="text-holoride mt-5 flex justify-center mt-5 mb-5">
               <Link href="/holoride/metrics">
