@@ -11,6 +11,12 @@
     background-size: cover;
 }
 
+.main-nav {
+    position: sticky;
+    top: 0;
+    z-index: 8;
+}
+
 .absolute-center-bottom {
     position: absolute ;
     bottom: 9% ; 

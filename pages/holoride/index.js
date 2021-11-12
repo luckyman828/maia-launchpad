@@ -20,9 +20,9 @@ export default function Holoride() {
 
   return (
     
-    <div className="sm:flex sm:flex-col-reverse md:flex md:flex-col-reverse 2xl:block xl:block mt-10">
+    <div className="sm:flex sm:flex-col-reverse md:flex md:flex-col-reverse 2xl:flex 2xl:justify-beetween xl:flex xl:justify-beetween lg:flex lg:flex-col-reverse mt-10">
 
-      <div className="2xl:w-8/12 xl:w-8/12 md:w-full inline-block	mx-3 bg-gray-50 border-r-2 border-l-2 border-b-2 rounded-md shadow-2xl">
+      <div className="2xl:w-8/12 xl:w-8/12 lg:w-full md:w-full xl:mx-3 2xl:mx-3 bg-gray-50 border-r-2 border-l-2 border-b-2 rounded-md shadow-2xl">
         <div className="px-10 border-b-2">
           
           <div className="flex justify-center mt-5 mb-5">
@@ -54,7 +54,7 @@ export default function Holoride() {
                     >
                      <Link href="/holoride">
                         <a href="#" className="h-9 px-3 py-2 rounded-md text-sm flex items-center" aria-current="page">
-                            <img className="block h-8 w-5 mr-3" src="../assets/img/rationale.svg" alt="logo"/>
+                            <img className="block h-8 w-5 mr-3" src="../assets/img/rationale-active.svg" alt="logo"/>
                               Rationale
                         </a>
                       </Link>
@@ -62,15 +62,15 @@ export default function Holoride() {
                     <Tab
                       className={
                         classNames(
-                          'w-full py-2.5 text-sm leading-5 font-medium text-blue-700 rounded-lg',
+                          'w-full py-2.5 text-sm leading-5 font-medium text-gray-500 rounded-lg',
                           'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60',
-                          'text-blue-100 '
+                          
                         )
                       }
                     >
                       <Link href="/holoride/metrics">
                         <a href="#" className="h-9 px-3 py-2 rounded-md text-sm flex items-center" aria-current="page">
-                            <img className="block h-8 w-5 mr-3" src="../assets/img/rationale.svg" alt="logo"/>
+                            <img className="block h-8 w-5 mr-3 opacity-70" src="../assets/img/metrics.svg" alt="logo"/>
                               Metrics
                         </a>
                       </Link>
@@ -78,15 +78,15 @@ export default function Holoride() {
                     <Tab
                       className={
                         classNames(
-                          'w-full py-2.5 text-sm leading-5 font-medium text-blue-700 rounded-lg',
+                          'w-full py-2.5 text-sm leading-5 font-medium text-gray-500 rounded-lg',
                           'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60',
-                          'text-blue-100 '
+                          
                         )
                       }
                     >
                       <Link href="/holoride/guide">
                         <a href="#" className="h-9 px-3 py-2 rounded-md text-sm flex items-center" aria-current="page">
-                            <img className="block h-8 w-5 mr-3" src="../assets/img/rationale.svg" alt="logo"/>
+                            <img className="block h-8 w-5 mr-3 opacity-70" src="../assets/img/guide.svg" alt="logo"/>
                               How to Guide
                         </a>
                       </Link>
@@ -180,7 +180,7 @@ export default function Holoride() {
         </div>
       </div>
 
-      <div className="2xl:w-3/12 xl:w-3/12 md:w-full inline-block	2xl:absolute xl:absolute mx-3 ">
+      <div className="2xl:w-4/12 xl:w-4/12 lg:w-full md:w-full xl:mx-3 2xl:mx-3">
         <div className="bg-gray-50 border-r-2 border-l-2 border-b-2 rounded-md shadow-2xl">
           <div className="px-1 border-b-2">
             <div className="shadow-lg">
@@ -229,7 +229,7 @@ export default function Holoride() {
               <Transition appear show={isOpen} as={Fragment}>
                 <Dialog
                   as="div"
-                  className="fixed inset-0 z-10 overflow-y-auto"
+                  className="fixed inset-0 z-10 overflow-y-auto bg-opacity-80 bg-gray-300"
                   onClose={closeModal}
                 >
                   <div className="min-h-screen px-4 text-center">

@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
     <div >
       <Header/>
       <div className="main">
-        <div className="container mx-auto ">
+        <div className="container mx-auto p-4">
           <Component {...pageProps} />
         </div>
         

@@ -3,8 +3,8 @@ import Link from "next/link"
 export default function Header() {
     return (
         
-        <nav className="bg-gray-100 border-b-2 border-gray-200 h-20 flex items-center">
-            <div className="container mx-auto flex justify-between">
+        <nav className="bg-gray-100 border-b-2 border-gray-200 h-20 flex items-center main-nav">
+            <div className="container mx-auto p-4 flex justify-between">
                 <div className="flex-shrink-0 flex items-center">
                     <img className="block lg:hidden h-10 w-auto" src="../assets/img/logo.svg" alt="Workflow"/>
                     <img className="hidden lg:block h-10 w-auto" src="../assets/img/logo-lg.svg" alt="Workflow"/>   
