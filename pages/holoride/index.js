@@ -20,10 +20,10 @@ export default function Holoride() {
 
   return (
     
-    <div className="flex flex-col-reverse  sm:flex sm:flex-col-reverse md:flex md:flex-col-reverse lg:block mt-10">
+    <div className="sm:flex sm:flex-col-reverse md:flex md:flex-col-reverse 2xl:block xl:block mt-10">
 
-      <div className="lg:w-8/12 md:w-full inline-block	mx-3 bg-gray-50 border-r-2 border-l-2 border-b-2 rounded-md shadow-2xl">
-        <div className="container mx-auto px-10 border-b-2">
+      <div className="2xl:w-8/12 xl:w-8/12 md:w-full inline-block	mx-3 bg-gray-50 border-r-2 border-l-2 border-b-2 rounded-md shadow-2xl">
+        <div className="px-10 border-b-2">
           
           <div className="flex justify-center mt-5 mb-5">
             <img className="w-30 " src="./assets/img/holoride.png" alt="Cover image"  />
@@ -38,7 +38,7 @@ export default function Holoride() {
             <a href="#" className="mx-5 opacity-75 hover:bg-gray-300 rounded-full p-2.5 flex justify-center"><img className="block h-4 w-auto" src="../assets/img/instergram.svg" alt="Workflow"/></a>
           </div>
         </div>
-        <div className="container mx-auto px-10 ">
+        <div className="px-10 ">
           <div className="flex justify-center mt-5 ">
             <div className="w-full max-w-xl px-2 sm:px-0 mb-5">
               <Tab.Group>
@@ -180,14 +180,14 @@ export default function Holoride() {
         </div>
       </div>
 
-      <div className="lg:w-3/12 md:w-full inline-block	lg:absolute mx-3 ">
+      <div className="2xl:w-3/12 xl:w-3/12 md:w-full inline-block	2xl:absolute xl:absolute mx-3 ">
         <div className="bg-gray-50 border-r-2 border-l-2 border-b-2 rounded-md shadow-2xl">
-          <div className="container mx-auto px-1 border-b-2">
+          <div className="px-1 border-b-2">
             <div className="shadow-lg">
               <img className="w-full round-md" src="./assets/img/announcement.jpg" alt="Cover image"  />
             </div>
           </div>
-          <div className="container mx-auto px-3 border-b-2">
+          <div className="px-3 border-b-2">
             <div className="text-center text-gray-500 mt-8">
               <div className="text-sm">
                 Offered tokens
@@ -266,7 +266,7 @@ export default function Holoride() {
                           <div>
                             Eligibility
                           </div>
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" onClick={closeModal}>
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 cursor-pointer hover:bg-grey-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" onClick={closeModal}>
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                           </svg>
                         </div>
@@ -330,7 +330,7 @@ export default function Holoride() {
               </Transition>
             </div>
           </div>
-          <div className="container mx-auto px-3 border-b-2">
+          <div className="px-3 border-b-2">
             <div className="text-center text-gray-500 mt-8 mb-2">
               Register Now
             </div>

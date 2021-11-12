@@ -4,7 +4,7 @@ export default function Header() {
     return (
         
         <nav className="bg-gray-100 border-b-2 border-gray-200 h-20 flex items-center">
-            <div className="container mx-auto lg:px-20 md:px-12 sm:px-4 flex justify-between">
+            <div className="container mx-auto flex justify-between">
                 <div className="flex-shrink-0 flex items-center">
                     <img className="block lg:hidden h-10 w-auto" src="../assets/img/logo.svg" alt="Workflow"/>
                     <img className="hidden lg:block h-10 w-auto" src="../assets/img/logo-lg.svg" alt="Workflow"/>   

@@ -15,7 +15,7 @@ export default function Footer() {
         //     </div>
         // </div>
         <div className="border-t-2 border-gray-200 mt-24">
-            <div className="container mx-auto lg:px-20 md:px-12 sm:px-12 px-12 mt-12 mb-12">
+            <div className="container mx-auto mt-12 mb-12">
                 <div className="grid grid-cols-6 gap-4 footer-responsive">
                     <div className="col-start-1 col-end-3 max-w-xs">
                         <div className="flex-shrink-0 flex items-center">
