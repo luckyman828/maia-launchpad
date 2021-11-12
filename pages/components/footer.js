@@ -30,7 +30,7 @@ export default function Footer() {
                             <a href="#" className="mx-5 opacity-75"><img className="block h-4 w-auto text-gray-400" src="../assets/img/twitter.svg" alt="Workflow"/></a>
                             <a href="#" className="mx-5 opacity-75"><img className="block h-4 w-auto" src="../assets/img/telegram.svg" alt="Workflow"/></a>
                             <a href="#" className="mx-5 opacity-75"><img className="block h-4 w-auto" src="../assets/img/facebook.svg" alt="Workflow"/></a>
-                            <a href="#" className="mx-5 opacity-75"><img className="block h-4  w-auto" src="../assets/img/instergram.svg" alt="Workflow"/></a>
+                            <a href="#" className="mx-5 opacity-75"><img className="block h-4  w-auto" src="../assets/img/linkedin.svg" alt="Workflow"/></a>
                         </div>
                         <div className="text-xs text-gray-400 mt-5">
                         © 2021 Maiar Launchpad. All rights reserved.

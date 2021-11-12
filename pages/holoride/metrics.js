@@ -41,6 +41,24 @@ export default function Metrics() {
     }, 
   }
 
+  const investor = {
+    img_url : "../assets/img/terranet-ab.png",
+    name : "Terranet AB",
+    service : "The Russo Brothers are American film and TV directors best known for their four installments in the Marvel Cinematic Universe, including Avengers: Infinity War (2018) and Endgame (2019). They advise holoride from an entertainment and storytelling perspective.",
+    link : {
+      url  : "#"
+    } 
+  }
+
+  const keyInvestor = {
+    img_url : "../assets/img/signum-capital.png",
+    name : "Signum Capital",
+    service : "supports game-changing projects that advance us towards the future of blockchain-enabled socioeconomic transformation.",
+    link : {
+      url  : "#"
+    }
+  }
+
   return (
     
     <div className="sm:flex sm:flex-col-reverse md:flex md:flex-col-reverse 2xl:flex 2xl:justify-beetween xl:flex xl:justify-beetween lg:flex lg:flex-col-reverse mt-10">
@@ -181,7 +199,7 @@ export default function Metrics() {
           </div>
           
           {/* <div className="2xl:flex 2xl:justify-center xl:flex xl:justify-center lg:flex lg:justify-center lg:block md:block sm:block text-center mt-5"> */}
-          <div class="grid 2xl:grid-cols-3 2xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-1sm:grid-cols-1 text-center gap-4"> 
+          <div className="grid 2xl:grid-cols-3 2xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-1sm:grid-cols-1 text-center gap-4"> 
             <Card
               img_url = {member.img_url}
               name = {member.name}
@@ -208,12 +226,12 @@ export default function Metrics() {
             
           </div>
 
-          <div className="text-holoride text-gray-500 mt-5 ">
+          <div className="text-holoride text-gray-500 mt-5 mb-5">
             Team
           </div>
 
           {/* <div className="2xl:flex 2xl:justify-center xl:flex xl:justify-center lg:flex lg:justify-center lg:block md:block sm:block text-center mt-5"> */}
-          <div class="grid 2xl:grid-cols-3 2xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-1sm:grid-cols-1 text-center gap-4"> 
+          <div className="grid 2xl:grid-cols-3 2xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-1sm:grid-cols-1 text-center gap-4"> 
             <Card
               img_url = {advisor.img_url}
               name = {advisor.name}
@@ -271,6 +289,208 @@ export default function Metrics() {
             ></Card>
             
           </div>
+
+          <div className="text-holoride text-gray-500 mt-5 mb-5">
+            Strategic Investors
+          </div>
+          
+          <div className="grid 2xl:grid-cols-3 2xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-1sm:grid-cols-1 text-center gap-4"> 
+            <Card
+              img_url = {investor.img_url}
+              name = {investor.name}
+              service = {investor.service}
+              link = {investor.link.url}
+            ></Card>
+
+            <Card
+              img_url = {investor.img_url}
+              name = {investor.name}
+              service = {investor.service}
+              link = {investor.link.url}
+            ></Card>
+
+            <Card
+              img_url = {investor.img_url}
+              name = {investor.name}
+              service = {investor.service}
+              link = {investor.link.url}
+            ></Card>
+          </div>
+
+          <div className="text-holoride text-gray-500 mt-5 mb-5">
+            Key Investors
+          </div>
+          
+          <div className="grid 2xl:grid-cols-3 2xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-1sm:grid-cols-1 text-center gap-4"> 
+            <Card
+              img_url = {keyInvestor.img_url}
+              name = {keyInvestor.name}
+              keyInvestor = "true"
+              service = {keyInvestor.service}
+              link = {keyInvestor.link.url}
+            ></Card>
+
+            <Card
+              img_url = {keyInvestor.img_url}
+              name = {keyInvestor.name}
+              keyInvestor = "true"
+              service = {keyInvestor.service}
+              link = {keyInvestor.link.url}
+            ></Card>
+
+            <Card
+              img_url = {keyInvestor.img_url}
+              name = {keyInvestor.name}
+              keyInvestor = "true"
+              service = {keyInvestor.service}
+              link = {keyInvestor.link.url}
+            ></Card>
+
+            <Card
+              img_url = {keyInvestor.img_url}
+              name = {keyInvestor.name}
+              keyInvestor = "true"
+              service = {keyInvestor.service}
+              link = {keyInvestor.link.url}
+            ></Card>
+
+            <Card
+              img_url = {keyInvestor.img_url}
+              name = {keyInvestor.name}
+              keyInvestor = "true"
+              service = {keyInvestor.service}
+              link = {keyInvestor.link.url}
+            ></Card>
+
+            <Card
+              img_url = {keyInvestor.img_url}
+              name = {keyInvestor.name}
+              keyInvestor = "true"
+              service = {keyInvestor.service}
+              link = {keyInvestor.link.url}
+            ></Card>
+           
+          </div>
+          
+          <div className="text-holoride text-gray-500 mt-5 mb-5">
+            Roadmap
+          </div>
+          <div className="mt-5 flex justify-start items-start">
+            <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
+            <div>
+              <div className="pl-2 text-lg">Q3 2021</div>
+              <div className="pl-2 text-sm flex justify-start mt-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                </svg>
+                C++ API Elrond SDK (Made by Elrond)
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-5 flex justify-start items-start">
+            <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
+            <div>
+              <div className="pl-2 text-lg">Q4 2021</div>
+              <div className="pl-2 text-sm flex justify-start mt-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                </svg>
+                RIDE Token Sale and Token Generation Event
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-5 flex justify-start items-start">
+            <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
+            <div>
+              <div className="pl-2 text-lg">Q1 2022</div>
+              <div className="pl-2 text-sm flex justify-start mt-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                </svg>
+                Infrastructure Planning
+              </div>
+
+              <div className="pl-2 text-sm flex justify-start mt-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                </svg>
+                Software Integration Architecture
+              </div>
+
+            </div>
+          </div>
+
+          <div className="mt-5 flex justify-start items-start">
+            <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
+            <div>
+              <div className="pl-2 text-lg">Q2 2022</div>
+              <div className="pl-2 text-sm flex justify-start mt-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                </svg>
+                PoC with Elrond Techstack
+              </div>
+
+              <div className="pl-2 text-sm flex justify-start mt-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                </svg>
+                Blockchain Integration in holoride App
+              </div>
+
+              <div className="pl-2 text-sm flex justify-start mt-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                </svg>
+                Blockchain Integration in Elastic SDK
+              </div>
+
+            </div>
+          </div>
+
+          <div className="mt-5 flex justify-start items-start">
+            <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
+            <div>
+              <div className="pl-2 text-lg">Q3 2022</div>
+              <div className="pl-2 text-sm flex justify-start mt-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                </svg>
+                NFT Test Integration into holoride Experiences
+              </div>
+
+              <div className="pl-2 text-sm flex justify-start mt-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                </svg>
+                Testing of Playtime-based Features with OEMs and holoride
+              </div>
+
+              <div className="pl-2 text-sm flex justify-start mt-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                </svg>
+                Security Audits
+              </div>
+
+            </div>
+          </div>
+
+          <div className="mt-5 flex justify-start items-start">
+            <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
+            <div>
+              <div className="pl-2 text-lg">Q4 2022</div>
+              <div className="pl-2 text-sm flex justify-start mt-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                </svg>
+                Product Launch
+              </div>
+            </div>
+          </div>
+          
           
           <div className="text-holoride mt-5 flex justify-center mt-5 mb-5">
               <Link href="/holoride/metrics">
