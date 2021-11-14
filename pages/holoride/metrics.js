@@ -614,6 +614,14 @@ export default function Metrics() {
           <div className="donut">
             <Chart options={chatOptions} series={chatSeries} type="donut" width="380"/>
           </div>
+
+          <div className="text-holoride text-gray-500 mt-5 mb-5">
+            Community And Social Channels
+          </div>
+
+          <div>
+            
+          </div>
           
           <div className="text-holoride mt-5 flex justify-center mt-5 mb-5">
               <Link href="/holoride/metrics">
