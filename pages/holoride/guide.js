@@ -3,7 +3,7 @@ import { Tab } from '@headlessui/react'
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import Card from '../components/holorides/Card'
-import Chart from "react-apexcharts";
+
 
 
 
@@ -126,15 +126,15 @@ export default function Metrics() {
                     <Tab
                       className={
                         classNames(
-                          'w-full py-2.5 text-sm leading-5 font-medium text-blue-700 rounded-lg',
+                          'w-full py-2.5 text-sm leading-5 font-medium  text-gray-500 rounded-lg',
                           'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60',
-                          'bg-green-50 shadow'
+                          
                         )
                       }
                     >
                       <Link href="/holoride/metrics">
                         <a href="#" className="h-9 px-3 py-2 rounded-md text-sm flex items-center" aria-current="page">
-                            <img className="block h-8 w-5 mr-3 " src="../assets/img/metrics-active.svg" alt="logo"/>
+                            <img className="block h-8 w-5 mr-3 opacity-70" src="../assets/img/metrics.svg" alt="logo"/>
                               Metrics
                         </a>
                       </Link>
@@ -142,15 +142,15 @@ export default function Metrics() {
                     <Tab
                       className={
                         classNames(
-                          'w-full py-2.5 text-sm leading-5 font-medium text-gray-500 rounded-lg',
+                          'w-full py-2.5 text-sm leading-5 font-medium text-blue-700 rounded-lg',
                           'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60',
-                          
+                          'bg-green-50 shadow'
                         )
                       }
                     >
                       <Link href="/holoride/guide">
                         <a href="#" className="h-9 px-3 py-2 rounded-md text-sm flex items-center" aria-current="page">
-                            <img className="block h-8 w-5 mr-3 opacity-70" src="../assets/img/guide.svg" alt="logo"/>
+                            <img className="block h-8 w-5 mr-3 opacity-70" src="../assets/img/guide-active.svg" alt="logo"/>
                               How to Guide
                         </a>
                       </Link>
@@ -188,480 +188,281 @@ export default function Metrics() {
 
           </div>
           
-          <div className="">
-            <img className="w-full rounded-md" src="../assets/img/cover-1.jpg" alt="Cover image"  />
-          </div>
+          
           
           <div className="text-holoride mt-5">
-            What is holoride?
+          Introducing the holoride (RIDE) Token Sale on the Maiar Launchpad
           </div>
           <div className="text-sm text-gray-600 mt-5">
-            holoride takes everyday journeys and transforms them into hyper-immersive experiences by combining navigational car data, extended reality (XR) and blockchain technology.
+            We are excited to announce the first project on Maiar Launchpad: holoride (RIDE). The token sale will follow a lottery format, with the recording of user EGLD balances (staked or delegated only) done on 22 November 2021 at a random time during that day.
             <br/>
             <br/>
-            In the 2 1/2 years since its inception, holoride has engaged in collaborations with Audi, Porsche, Daimler, and Ford, as well as heavy hitter media companies such as Universal Pictures, Disney, and Discovery Channel.
-            <br/>
-            <br/>
-            holoride will use the high throughput, inexpensive, carbon-negative, and user-friendly Elrond blockchain to enable a sustainable economy driven by a compelling set of economic incentives such as unique NFTs and social currencies to significantly enhance the user experience.
-            
+            Rules for this launchpad:
           </div>
-          <div className="text-holoride mt-5">
-            Trusted by
-          </div>
+          <div className="text-gray-700">
 
-          <div className="">
-            <img className="w-full rounded-md" src="../assets/img/trusted.png" alt="Cover image"  />
+            <div className="flex justify-start items-start mt-5">
+                <div className="rounded-full p-1 border-blue-700 bg-blue-700 mt-1.5"></div>
+                <div className="pl-2 text-sm">
+                  We will calculate the amount of EGLD delegated or staked for each EGLD address that did and passed the KYC checks. Based on the amount staked or delegated the user will be assigned one of the following tiers:
+                </div>
+            </div>
           </div>
+          <div className="mt-8 ">
+            <table className=" rounded-lg bg-blue-700 w-full">
+              <thead className="h-20 text-white">
+                <tr>
+                  <th className="p-5">Tier</th>
+                  <th>EGLD <br/>Staked/delegated</th>
+                  <th>Max. No. of Tickets <br/> per User</th>
+                  <th>Max Amount per <br/>User ($)</th>
+                </tr>
+              </thead>
+              <tbody className="bg-white text-center">
+                <tr>
+                  <td className="p-5">Tier 5</td>
+                  <td>&gt;= 1 EGLD</td>
+                  <td>1</td>
+                  <td>$200</td>
+                </tr>
 
-          <div className="text-holoride text-gray-500 mt-5 ">
-            Team
+                <tr>
+                  <td className="p-5">Tier 5</td>
+                  <td>&gt;= 1 EGLD</td>
+                  <td>1</td>
+                  <td>$200</td>
+                </tr>
+
+                <tr>
+                  <td className="p-5">Tier 5</td>
+                  <td>&gt;= 1 EGLD</td>
+                  <td>1</td>
+                  <td>$200</td>
+                </tr>
+
+                <tr>
+                  <td className="p-5">Tier 5</td>
+                  <td>&gt;= 1 EGLD</td>
+                  <td>1</td>
+                  <td>$200</td>
+                </tr>
+
+                <tr>
+                  <td className="p-5">Tier 5</td>
+                  <td>&gt;= 1 EGLD</td>
+                  <td>1</td>
+                  <td>$200</td>
+                </tr>
+                
+              </tbody>
+            </table>
           </div>
 
           <div className="text-sm text-gray-600 mt-5">
-            As of October 2021, the holoride team consists of more than 30 full-time employees (and growing) from 10 different nationalities. Previous employers include Audi, Amazon, Apple, BMW, Byton, NIO, and XING. The founders team consists of the following individuals:
-          </div>
-          
-          {/* <div className="2xl:flex 2xl:justify-center xl:flex xl:justify-center lg:flex lg:justify-center lg:block md:block sm:block text-center mt-5"> */}
-          <div className="grid 2xl:grid-cols-3 2xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-1sm:grid-cols-1 text-center gap-4"> 
-            <Card
-              img_url = {member.img_url}
-              name = {member.name}
-              stuff = {member.stuff}
-              service = {member.service}
-              contactInfo = {member.contactInfo}
-            ></Card>
-
-            <Card
-              img_url = {member.img_url}
-              name = {member.name}
-              stuff = {member.stuff}
-              service = {member.service}
-              contactInfo = {member.contactInfo}
-            ></Card>
-
-            <Card
-              img_url = {member.img_url}
-              name = {member.name}
-              stuff = {member.stuff}
-              service = {member.service}
-              contactInfo = {member.contactInfo}
-            ></Card>
-            
-          </div>
-
-          <div className="text-holoride text-gray-500 mt-5 mb-5">
-            Team
-          </div>
-
-          {/* <div className="2xl:flex 2xl:justify-center xl:flex xl:justify-center lg:flex lg:justify-center lg:block md:block sm:block text-center mt-5"> */}
-          <div className="grid 2xl:grid-cols-3 2xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-1sm:grid-cols-1 text-center gap-4"> 
-            <Card
-              img_url = {advisor.img_url}
-              name = {advisor.name}
-              stuff = {advisor.stuff}
-              service = {advisor.service}
-              contactInfo = {advisor.contactInfo}
-            ></Card>
-
-            <Card
-              img_url = {advisor.img_url}
-              name = {advisor.name}
-              stuff = {advisor.stuff}
-              service = {advisor.service}
-              contactInfo = {advisor.contactInfo}
-            ></Card>
-
-            <Card
-              img_url = {advisor.img_url}
-              name = {advisor.name}
-              stuff = {advisor.stuff}
-              service = {advisor.service}
-              contactInfo = {advisor.contactInfo}
-            ></Card>
-
-            <Card
-              img_url = {advisor.img_url}
-              name = {advisor.name}
-              stuff = {advisor.stuff}
-              service = {advisor.service}
-              contactInfo = {advisor.contactInfo}
-            ></Card>
-
-            <Card
-              img_url = {advisor.img_url}
-              name = {advisor.name}
-              stuff = {advisor.stuff}
-              service = {advisor.service}
-              contactInfo = {advisor.contactInfo}
-            ></Card>
-
-            <Card
-              img_url = {advisor.img_url}
-              name = {advisor.name}
-              stuff = {advisor.stuff}
-              service = {advisor.service}
-              contactInfo = {advisor.contactInfo}
-            ></Card>
-
-            <Card
-              img_url = {advisor.img_url}
-              name = {advisor.name}
-              stuff = {advisor.stuff}
-              service = {advisor.service}
-              contactInfo = {advisor.contactInfo}
-            ></Card>
-            
-          </div>
-
-          <div className="text-holoride text-gray-500 mt-5 mb-5">
-            Strategic Investors
-          </div>
-          
-          <div className="grid 2xl:grid-cols-3 2xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-1sm:grid-cols-1 text-center gap-4"> 
-            <Card
-              img_url = {investor.img_url}
-              name = {investor.name}
-              service = {investor.service}
-              link = {investor.link.url}
-            ></Card>
-
-            <Card
-              img_url = {investor.img_url}
-              name = {investor.name}
-              service = {investor.service}
-              link = {investor.link.url}
-            ></Card>
-
-            <Card
-              img_url = {investor.img_url}
-              name = {investor.name}
-              service = {investor.service}
-              link = {investor.link.url}
-            ></Card>
-          </div>
-
-          <div className="text-holoride text-gray-500 mt-5 mb-5">
-            Key Investors
-          </div>
-          
-          <div className="grid 2xl:grid-cols-3 2xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-1sm:grid-cols-1 text-center gap-4"> 
-            <Card
-              img_url = {keyInvestor.img_url}
-              name = {keyInvestor.name}
-              keyInvestor = "true"
-              service = {keyInvestor.service}
-              link = {keyInvestor.link.url}
-            ></Card>
-
-            <Card
-              img_url = {keyInvestor.img_url}
-              name = {keyInvestor.name}
-              keyInvestor = "true"
-              service = {keyInvestor.service}
-              link = {keyInvestor.link.url}
-            ></Card>
-
-            <Card
-              img_url = {keyInvestor.img_url}
-              name = {keyInvestor.name}
-              keyInvestor = "true"
-              service = {keyInvestor.service}
-              link = {keyInvestor.link.url}
-            ></Card>
-
-            <Card
-              img_url = {keyInvestor.img_url}
-              name = {keyInvestor.name}
-              keyInvestor = "true"
-              service = {keyInvestor.service}
-              link = {keyInvestor.link.url}
-            ></Card>
-
-            <Card
-              img_url = {keyInvestor.img_url}
-              name = {keyInvestor.name}
-              keyInvestor = "true"
-              service = {keyInvestor.service}
-              link = {keyInvestor.link.url}
-            ></Card>
-
-            <Card
-              img_url = {keyInvestor.img_url}
-              name = {keyInvestor.name}
-              keyInvestor = "true"
-              service = {keyInvestor.service}
-              link = {keyInvestor.link.url}
-            ></Card>
-           
+            Price per ticket: $200 (paid in EGLD)
+            <br/><br/>
+            Each tier will give the user the option to buy a maximum number of lottery tickets. The user can choose how many lottery tickets to buy but he will not be able to buy more than the maximum permitted by the tier assigned based on the amount of EGLD staked or delegated.
+            <br/><br/>
+            Each ticket will cost: $200, to be paid in EGLD; price in EGLD will be determined prior to the lottery draw date. Each winning ticket will receive 5000 RIDE (1 RIDE ≈ $0,04). The non-winning tickets will be able to claim back all funds paid for the tickets after the draw. So this is a no-loss lottery, as no one is losing but not all are winning.
+            <br/><br/>
+            Please ensure that you follow the timeline further down below carefully if you wish to participate.
           </div>
           
           <div className="text-holoride text-gray-500 mt-5 mb-5">
-            Roadmap
+            Token Sale Details:
           </div>
-          {/* road map */}
+
+          <div className="text-gray-700">
+
+            <div className="flex justify-start items-start mt-5">
+                <div className="rounded-full p-1 border-blue-700 bg-blue-700 mt-1.5"></div>
+                <div className="pl-2 text-sm">
+                Token Name: holoride (RIDE)
+                </div>
+            </div>
+            <div className="flex justify-start items-start mt-5">
+                <div className="rounded-full p-1 border-blue-700 bg-blue-700 mt-1.5"></div>
+                <div className="pl-2 text-sm">
+                Hard Cap: 2,000,000 USD
+                </div>
+            </div>
+            <div className="flex justify-start items-start mt-5">
+                <div className="rounded-full p-1 border-blue-700 bg-blue-700 mt-1.5"></div>
+                <div className="pl-2 text-sm">
+                Total Token Supply: 1,000,000,000 RIDE
+                </div>
+            </div>
+            <div className="flex justify-start items-start mt-5">
+                <div className="rounded-full p-1 border-blue-700 bg-blue-700 mt-1.5"></div>
+                <div className="pl-2 text-sm">
+                Initial Token Supply: 130,000,000 RIDE
+                </div>
+            </div>
+
+            <div className="flex justify-start items-start mt-5">
+                <div className="rounded-full p-1 border-blue-700 bg-blue-700 mt-1.5"></div>
+                <div className="pl-2 text-sm">
+                Total Tokens Allocated to Maiar Launchpad: 50,000,000 RIDE (5% of Total Token Supply)
+                </div>
+            </div>
+
+            <div className="flex justify-start items-start mt-5">
+                <div className="rounded-full p-1 border-blue-700 bg-blue-700 mt-1.5"></div>
+                <div className="pl-2 text-sm">
+                Public Sale Token Price: 1 RIDE ≈ $0.04
+                </div>
+            </div>
+          </div>
+
+          <div className="text-gray-700 mt-10">
+
+            <div className="flex justify-start items-start mt-5">
+                <div className="rounded-full p-1 border-blue-700 bg-blue-700 mt-1.5"></div>
+                <div className="pl-2 text-sm">
+                Token Sale Format: Lottery
+                </div>
+            </div>
+            <div className="flex justify-start items-start mt-5">
+                <div className="rounded-full p-1 border-blue-700 bg-blue-700 mt-1.5"></div>
+                <div className="pl-2 text-sm">
+                Funding currency: EGLD
+                </div>
+            </div>
+            <div className="flex justify-start items-start mt-5">
+                <div className="rounded-full p-1 border-blue-700 bg-blue-700 mt-1.5"></div>
+                <div className="pl-2 text-sm">
+                EGLD/RIDE parity to be decided based on the EGLD USD spot price on November 24
+                </div>
+            </div>
+            <div className="flex justify-start items-start mt-5">
+                <div className="rounded-full p-1 border-blue-700 bg-blue-700 mt-1.5"></div>
+                <div className="pl-2 text-sm">
+                Purchase lottery tickets: November 24, 2021
+                </div>
+            </div>
+
+            <div className="flex justify-start items-start mt-5">
+                <div className="rounded-full p-1 border-blue-700 bg-blue-700 mt-1.5"></div>
+                <div className="pl-2 text-sm">
+                Lottery draw for winning tickets: November 25, 2021
+                </div>
+            </div>
+
+            <div className="flex justify-start items-start mt-5">
+                <div className="rounded-full p-1 border-blue-700 bg-blue-700 mt-1.5"></div>
+                <div className="pl-2 text-sm">
+                Winners claim RIDE token: 26 November 2021
+                </div>
+            </div>
+          </div>
+
+          <div className="text-gray-700 mt-10">
+
+            <div className="flex justify-start items-start mt-5">
+                <div className="rounded-full p-1 border-blue-700 bg-blue-700 mt-1.5"></div>
+                <div className="pl-2 text-sm">
+                Max Number of Winning Lottery Tickets: 10,000
+                </div>
+            </div>
+            <div className="flex justify-start items-start mt-5">
+                <div className="rounded-full p-1 border-blue-700 bg-blue-700 mt-1.5"></div>
+                <div className="pl-2 text-sm">
+                Allocation Per Winning Ticket: $200 (5000 RIDE)
+                </div>
+            </div>
+            <div className="flex justify-start items-start mt-5">
+                <div className="rounded-full p-1 border-blue-700 bg-blue-700 mt-1.5"></div>
+                <div className="pl-2 text-sm">
+                Supported Currency: EGLD only
+                </div>
+            </div>
+            <div className="flex justify-start items-start mt-5">
+                <div className="rounded-full p-1 border-blue-700 bg-blue-700 mt-1.5"></div>
+                <div className="pl-2 text-sm">
+                holoride (RIDE) will be issued on the Elrond Network blockchain as an ESDT asset
+                </div>
+            </div>
+          
+          </div>
+
+          <div className="text-holoride text-gray-500 mt-5 mb-5">
+            Lottery Timeline:
+          </div>
           <div>
             <div className="mt-5 flex justify-start items-start">
-              <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
+              <div className="rounded-full p-1.5 bg-blue-700 mt-2"></div>
               <div>
-                <div className="pl-2 text-lg">Q3 2021</div>
-                <div className="pl-2 text-sm flex justify-start mt-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                  </svg>
-                  C++ API Elrond SDK (Made by Elrond)
-                </div>
+                <div className="pl-2 text-lg">4 November 2021</div>
+                <div className="pl-2 text-sm text-gray-500">KYC (Know-your-Customer) begins</div>
               </div>
             </div>
 
             <div className="mt-5 flex justify-start items-start">
-              <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
+              <div className="rounded-full p-1 border-2 border-blue-700 mt-2"></div>
               <div>
-                <div className="pl-2 text-lg">Q4 2021</div>
-                <div className="pl-2 text-sm flex justify-start mt-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                  </svg>
-                  RIDE Token Sale and Token Generation Event
-                </div>
+                <div className="pl-2 text-lg">22 November 2021</div>
+                <div className="pl-2 text-sm text-gray-500">KYC closes</div>
+                <div className="pl-2 text-sm text-gray-500">Change address not allowed anymore</div>
               </div>
             </div>
 
             <div className="mt-5 flex justify-start items-start">
-              <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
+              <div className="rounded-full p-1 border-2 border-blue-700 mt-2"></div>
               <div>
-                <div className="pl-2 text-lg">Q1 2022</div>
-                <div className="pl-2 text-sm flex justify-start mt-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Infrastructure Planning
+                <div className="pl-2 text-lg">22 November 2021</div>
+                <div className="pl-2 text-sm text-gray-500">EGLD Holdings Calculation Day</div>
+                <div className="pl-2 text-sm text-gray-500">
+                Staking and delegation amount snapshot for addresses that passed the KYC. During this day, users' EGLD amount staked or delegated will be recorded at a random time. Your amount of EGLD staked or delegated for that address will determine the Tier and number of tickets that you will be able to buy. Please note that EGLD not staked or delegated will NOT count towards your EGLD holdings calculation.
                 </div>
-
-                <div className="pl-2 text-sm flex justify-start mt-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Software Integration Architecture
-                </div>
-
+              </div>
+            </div>
+            
+            <div className="mt-5 flex justify-start items-start">
+              <div className="rounded-full p-1 border-2 border-blue-700 mt-2"></div>
+              <div>
+                <div className="pl-2 text-lg">23 November 2021</div>
+                <div className="pl-2 text-sm text-gray-500">Calculate no. of tickets eligible per address</div>
+                <div className="pl-2 text-sm text-gray-500">This information will be saved in the Launchpad Smart Contract for full transparency.</div>
               </div>
             </div>
 
             <div className="mt-5 flex justify-start items-start">
-              <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
+              <div className="rounded-full p-1 border-2 border-blue-700 mt-2"></div>
               <div>
-                <div className="pl-2 text-lg">Q2 2022</div>
-                <div className="pl-2 text-sm flex justify-start mt-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                  </svg>
-                  PoC with Elrond Techstack
-                </div>
-
-                <div className="pl-2 text-sm flex justify-start mt-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Blockchain Integration in holoride App
-                </div>
-
-                <div className="pl-2 text-sm flex justify-start mt-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Blockchain Integration in Elastic SDK
-                </div>
-
+                <div className="pl-2 text-lg">24 November 2021 03:00 PM (UTC)</div>
+                <div className="pl-2 text-sm text-gray-500">Buy lottery tickets</div>
+                <div className="pl-2 text-sm text-gray-500">All eligible users will be able to buy tickets for a 24 hour period. Users must also sign the Token Purchase Agreement at the same time, prior to completing the ticket purchase. EGLD price per lottery ticket to be determined before 03:00 PM (UTC).</div>
               </div>
             </div>
 
             <div className="mt-5 flex justify-start items-start">
-              <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
+              <div className="rounded-full p-1 border-2 border-blue-700 mt-2"></div>
               <div>
-                <div className="pl-2 text-lg">Q3 2022</div>
-                <div className="pl-2 text-sm flex justify-start mt-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                  </svg>
-                  NFT Test Integration into holoride Experiences
-                </div>
-
-                <div className="pl-2 text-sm flex justify-start mt-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Testing of Playtime-based Features with OEMs and holoride
-                </div>
-
-                <div className="pl-2 text-sm flex justify-start mt-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Security Audits
-                </div>
-
+                <div className="pl-2 text-lg">25 November 2021 03:00 PM (UTC)</div>
+                <div className="pl-2 text-sm text-gray-500">Ticket buy closes, the lottery draw begins and winning tickets are announced</div>
+                
               </div>
             </div>
 
             <div className="mt-5 flex justify-start items-start">
-              <div className="rounded-full p-1 border border-blue-700 mt-2"></div>
+              <div className="rounded-full p-1 border-2 border-blue-700 mt-2"></div>
               <div>
-                <div className="pl-2 text-lg">Q4 2022</div>
-                <div className="pl-2 text-sm flex justify-start mt-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="#3B82F6">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Product Launch
-                </div>
+                <div className="pl-2 text-lg">26 November 2021 03:00 PM (UTC)</div>
+                <div className="pl-2 text-sm text-gray-500">Claim RIDE tokens for winning tickets and Claim EGLD for losing tickets</div>
               </div>
             </div>
+
           </div>
-          {/* end of road map */}
           
           <div className="text-holoride text-gray-500 mt-5 mb-5">
-            Key Metrics
+            holoride Project Links:
           </div>
-          <div className="mt-8 ">
-            <table className=" rounded-lg bg-blue-700 w-full">
-              <thead className="h-15 text-white">
-                <tr>
-                  <th className="p-5">Token Name</th>
-                  <th>Ride</th>
-                </tr>
-              </thead>
-              <tbody className="bg-white">
-                <tr>
-                  <td className="p-5">Max supply</td>
-                  <td>1,000,000,000 RIDE</td>
-                </tr>
-
-                <tr>
-                  <td className="p-5">Initial circulating supply</td>
-                  <td>130,000,000 RIDE</td>
-                </tr>
-
-                <tr>
-                  <td className="p-5">Maiar Launchpad price</td>
-                  <td>$0.04 USD / RIDE</td>
-                </tr>
-                
-              </tbody>
-            </table>
-          </div>
-
-          <div className="text-holoride text-gray-500 mt-5 mb-5">
-            Token Sale
-          </div>
-          <div className="mt-8 ">
-            <table className=" rounded-lg bg-blue-700 w-full">
-              <thead className="h-15 text-white">
-                <tr>
-                  <th className="p-5"></th>
-                  <th>Tokens Sold</th>
-                  <th>Price</th>
-                  <th>Raised</th>
-                </tr>
-              </thead>
-              <tbody className="bg-white">
-                <tr>
-                  <td className="p-5">Private Sale</td>
-                  <td>200,000,000</td>
-                  <td>$0.02</td>
-                  <td>$4M USD</td>
-                </tr>
-
-                <tr>
-                  <td className="p-5">Public Sale</td>
-                  <td>50,000,000</td>
-                  <td>$0.04</td>
-                  <td>$2M USD</td>
-                </tr>               
-                
-              </tbody>
-            </table>
-          </div>
-
-          <div className="text-holoride text-gray-500 mt-5 mb-5">
-            Token Governance And Use Of Funds
-          </div>
-
-          <div className="text-sm text-gray-600 mt-5">
-            The holoride team plans to allocate the proceeds of the RIDE token sale as follows:
-          </div>
-          
-          <div className="grid grid-cols-4 gap-4 mt-5">
-              <div className="flex flex-col items-center">
-                <div className="text-lg text-blue-700">70%</div>
-                <div className="text-gray-600">Content creation</div>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="text-lg text-blue-700">12.5%</div>
-                <div className="text-gray-600">Development</div>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="text-lg text-blue-700">70%</div>
-                <div className="text-gray-600">Marketing</div>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="text-lg text-blue-700">70%</div>
-                <div className="text-gray-600">Legal & Security Audits</div>
-              </div>
-          </div>
-
-          <div className="text-sm text-gray-600 mt-5">
-          All funds are held in a multi-sig cold wallet controlled by the core team. Any movements of funds require at least 2 out of 3 signatures from the top management team.
-          </div>
-          <div className="donut">
-            <Chart options={chatOptions} series={chatSeries} type="donut" width="380"/>
-          </div>
-
-          <div className="text-holoride text-gray-500 mt-5 mb-5">
-            Community And Social Channels
-          </div>
-
-          <div className="border-2 grid grid-cols-4 sm:grid-cols-3 gap-4 p-4 rounded-md">
-            <div className="flex flex-col items-center">
-              <img className="w-1/5 rounded-md" src="../assets/img/twitter-blue.svg" alt="Cover image"  />
-              Twitter
-            </div>
-            <div className="flex flex-col items-center">
-              <img className="w-1/5 rounded-md" src="../assets/img/telegram-blue.svg" alt="Cover image"  />
-              Telegram
-            </div>
-            <div className="flex flex-col items-center">
-              <img className="w-1/5 rounded-md" src="../assets/img/blog-blue.svg" alt="Cover image"  />
-              Blog
-            </div>
-            <div className="flex flex-col items-center">
-              <img className="w-1/5 rounded-md" src="../assets/img/announcement-blue.svg" alt="Cover image"  />
-              Announcements
-            </div>
-            <div className="flex flex-col items-center">
-              <img className="w-1/5 rounded-md" src="../assets/img/instagram-blue.svg" alt="Cover image"  />
-              Instagram
-            </div>
-            <div className="flex flex-col items-center">
-              <img className="w-1/5 rounded-md mt-0.5 mb-0.5" src="../assets/img/facebook-blue.svg" alt="Cover image"  />
-              Facebook
-            </div>
-            <div className="flex flex-col items-center">
-              <img className="w-1/5 rounded-md" src="../assets/img/linkedin-blue.svg" alt="Cover image"  />
-              Linkedin
-            </div>
-            <div className="flex flex-col items-center">
-              <img className="w-1/5 rounded-md mt-1 mb-1" src="../assets/img/youtube-blue.svg" alt="Cover image"  />
-              Youtube
-            </div>
-          </div>
-
-          <div className="text-holoride text-gray-500 mt-5 mb-5">
-            Useful Links
-          </div>
-          <div className="text-blue-700">
+     
+          <div className="text-blue-500">
 
             <div className="flex justify-start items-center ">
                 <div className="rounded-full p-1 border-blue-700 bg-blue-700"></div>
-                <div className="pl-2 text-lg">
+                <div className="pl-2 text-md">
                   <Link href="#">
                     <a>Website</a>
                   </Link>
@@ -670,7 +471,7 @@ export default function Metrics() {
 
             <div className="mt-5 flex justify-start items-center">
                 <div className="rounded-full p-1 border-blue-700 bg-blue-700"></div>
-                <div className="pl-2 text-lg">
+                <div className="pl-2 text-md">
                   <Link href="#">
                     <a>Litepaper</a>
                   </Link>
@@ -679,16 +480,51 @@ export default function Metrics() {
 
             <div className="mt-5 flex justify-start items-center">
                 <div className="rounded-full p-1 border-blue-700 bg-blue-700"></div>
-                <div className="pl-2 text-lg">
+                <div className="pl-2 text-md">
                   <Link href="#">
                     <a>Creator Space</a>
+                  </Link>
+                </div>
+            </div>
+
+            <div className="mt-5 flex justify-start items-center">
+                <div className="rounded-full p-1 border-blue-700 bg-blue-700"></div>
+                <div className="pl-2 text-md">
+                  <Link href="#">
+                    <a>Twitter</a>
+                  </Link>
+                </div>
+            </div>
+
+            <div className="mt-5 flex justify-start items-center">
+                <div className="rounded-full p-1 border-blue-700 bg-blue-700"></div>
+                <div className="pl-2 text-md">
+                  <Link href="#">
+                    <a>Blog</a>
                   </Link>
                 </div>
             </div>
             
           </div>
           
-          <div className="text-holoride mt-5 flex justify-center mt-5 mb-5">
+          <div className="text-sm text-gray-600 mt-5">
+            Reminder: Users need to complete their account verification (KYC) and also be from an accepted jurisdiction to participate in this token sale.
+            <br/><br/>
+            * Users from the following countries will not be able to participate in token sales on the Maiar Launchpad platform: Afghanistan, Angola, Belarus, Bosnia & Herzegovina, Burkina Faso; Burundi, Cayman Island, Central African Republic, People’s Republic of China, Congo (DRC), Cote d’Ivoire (Ivory Coast), Cuba, Columbia, Ecuador, Egypt, Eritrea, Ethiopia, Guinea, Guinea-Bissau, Guyana, Haiti, Iran, Iraq, Kosovo, Laos, Lebanon, Liberia, Libya, Macedonia, Maledives, Mali, Marokko; Myanmar, Nigeria, North-Korea, Panama, Pakistan, Papua NG, Republic of Crimea, Serbia, Somalia, Sri Lanka, Senegal; Sudan, South Sudan, Syria, Trinidad and Tobago, Tunisia, Turkmenistan, Uganda, Ukraine, United States of America, Uzbekistan, Vanuatu, Venezuela, Yemen, Zimbabwe.
+            <br/><br/>
+            <br/>
+            Special note for Turkey and Philippines: up to $1000 USD, a maximum of 5 tickets, per person are available to Turkish and Filipino participants, due to regulatory compliance considerations
+          </div>
+          
+          <div className="text-holoride text-gray-500 mt-5 mb-5">
+            Legal disclaimer:
+          </div>
+
+          <div className="text-sm text-gray-600 mt-5 mb-5">
+            All crypto related projects and startups are subject to high market risk. Please make your choice very cautiously as Maiar Launchpad is not intended as, and does not provide, any investment or financial advice whatsoever, you being held completely and fully responsible for your decisions. Maiar Launchpad will choose high-quality projects, but will not be responsible for any losses. Maiar Launchpad does not issue, subscribe, place or accept funds from you in relation with the crypto related projects and startups that are promoted on the Maiar Launchpad platform. For more details about the risks, please consult the T&Cs on Maiar Launchpad’s website.
+          </div>
+          
+          <div className="text-holoride mt-5 flex justify-center mt-15 mb-5">
               <Link href="/holoride/metrics">
                 <a href="#" className="bg-gray-100 text-gray-100 bg-blue-700 lg:h-12 px-3 py-2 rounded-md text-sm flex items-center w-52 flex justify-center" aria-current="page">
                   <img className="opacity-75 block h-8 w-3 mr-3" src="../assets/img/connect.svg" alt="logo"/>

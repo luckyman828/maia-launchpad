@@ -14,8 +14,8 @@ export default function Header() {
                 </div>
                 <div className="flex"> 
                     <div className="flex space-x-4">
-                        <Link href="/">
-                            <a href="#" className="bg-gray-100 border-2 text-blue-800 h-9 px-3 py-2 rounded-md text-xs flex items-center justify-between hover:border-gray-400" aria-current="page">
+                        <Link href="https://maiarlaunchpad.typeform.com/to/TzeoE5SU">
+                            <a className="bg-gray-100 border-2 text-blue-800 h-9 px-3 py-2 rounded-md text-xs flex items-center justify-between hover:border-gray-400" aria-current="page">
                                 <img className="block h-8 w-3 mr-3" src="../assets/img/startups.svg" alt="logo"/>
                                 Startups Apply
                             </a>
