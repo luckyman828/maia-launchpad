@@ -3,7 +3,7 @@ import { Tab } from '@headlessui/react'
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import Card from '../components/holorides/Card'
-import Chart from "react-apexcharts";
+// import Chart from "react-apexcharts";
 
 
 
@@ -22,25 +22,25 @@ export default function Metrics() {
     setIsOpen(true)
   }
 
-  const chatSeries = [23, 11, 54, 72, 12]
-  // const chatLabels = ["Public Sale", "Community", "Ecosystem", "Treasury", "Equity investors"]
-  const chatOptions = {
-    chart: {
-      type: 'donut',
-    },
-    responsive: [{
-      breakpoint: 480,
-      options: {
-        chart: {
-          width: 200
-        },
-        legend: {
-          position: 'bottom'
-        },
-        labels: ["Comedy", "Action", "SciFi", "Drama", "Horror"],
-      }
-    }]
-  }
+  // const chatSeries = [23, 11, 54, 72, 12]
+  // // const chatLabels = ["Public Sale", "Community", "Ecosystem", "Treasury", "Equity investors"]
+  // const chatOptions = {
+  //   chart: {
+  //     type: 'donut',
+  //   },
+  //   responsive: [{
+  //     breakpoint: 480,
+  //     options: {
+  //       chart: {
+  //         width: 200
+  //       },
+  //       legend: {
+  //         position: 'bottom'
+  //       },
+  //       labels: ["Comedy", "Action", "SciFi", "Drama", "Horror"],
+  //     }
+  //   }]
+  // }
 
   const member = {
     img_url : "../assets/img/dirk-ahlborn.png",
@@ -611,9 +611,9 @@ export default function Metrics() {
           <div className="text-sm text-gray-600 mt-5">
           All funds are held in a multi-sig cold wallet controlled by the core team. Any movements of funds require at least 2 out of 3 signatures from the top management team.
           </div>
-          <div className="donut">
+          {/* <div className="donut">
             <Chart options={chatOptions} series={chatSeries} type="donut" width="380"/>
-          </div>
+          </div> */}
 
           <div className="text-holoride text-gray-500 mt-5 mb-5">
             Community And Social Channels
