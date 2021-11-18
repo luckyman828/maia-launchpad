@@ -27,31 +27,36 @@ export default function Metrics() {
   const NUMBER_CFG = {count: DATA_COUNT, min: 0, max: 100};
 
   const chartData ={
-    labels: ['Public Sale', 'Community', 'Ecosystem', 'Treasury', 'Equity investors', 'Team'],
+    labels: ['20% Public Sale', '25% Community', '12.5% Ecosystem', '2.5% Treasury', '15% Equity investors', '20% Team'],
     datasets: [
       {
         label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        pointRadius: 8,
+        data: [20, 25, 12.5, 2.5, 15, 20],
         
         backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
+          'rgba(234, 63, 247, 1)',
+          'rgba(239, 137, 249, 1)',
+          'rgba(25, 91, 245, 1)',
+          'rgba(22, 61, 85, 1)',
+          'rgba(115, 251, 253, 1)',
+          'rgba(106, 152, 198, 1)',
         ],
         borderColor: [
-          'rgba(255, 99, 132, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
+          'rgba(234, 63, 247, 1)',
+          'rgba(239, 137, 249, 1)',
+          'rgba(25, 91, 245, 1)',
+          'rgba(22, 61, 85, 1)',
+          'rgba(115, 251, 253, 1)',
+          'rgba(106, 152, 198, 1)',
         ],
         borderWidth: 1,
       },
     ],
+
+    layout:{
+      padding: 30,
+    }
   };
 
   const member = {
@@ -541,7 +546,7 @@ export default function Metrics() {
                   <th>Ride</th>
                 </tr>
               </thead>
-              <tbody className="bg-white">
+              <tbody className="bg-white text-center">
                 <tr>
                   <td className="p-5">Max supply</td>
                   <td>1,000,000,000 RIDE</td>
@@ -574,7 +579,7 @@ export default function Metrics() {
                   <th>Raised</th>
                 </tr>
               </thead>
-              <tbody className="bg-white">
+              <tbody className="bg-white text-center">
                 <tr>
                   <td className="p-5">Private Sale</td>
                   <td>200,000,000</td>
@@ -627,8 +632,27 @@ export default function Metrics() {
             <Chart options={chatOptions} series={chatSeries} type="donut" width="380"/>
           </div> */}
 
-          <div className="w-1/2 sm:w-full">
-            <Doughnut data={chartData} />
+          <div className="justify-self-center w-2/3 sm:full m-auto">
+            <Doughnut data={chartData} options= {{
+              layout: {
+              },
+              plugins: {
+                legend: {
+                      title: {
+                        display: true,
+                        text: "RIDE Token Allocation",
+                      },
+                      align: "center",
+                      position: "right",
+                      pointStyle: 'circle',
+                      labels: {
+                        padding: 20,
+                        boxWidth: 8,
+                        usePointStyle: true,
+                      }
+                  }
+              }}
+            } />
           </div>
 
           <div className="text-holoride text-gray-500 mt-5 mb-5">
@@ -636,9 +660,13 @@ export default function Metrics() {
           </div>
 
           <div className="border-2 grid grid-cols-4 sm:grid-cols-3 gap-4 p-4 rounded-md">
-            <div className="flex flex-col items-center">
-              <img className="w-1/5 rounded-md" src="../assets/img/twitter-blue.svg" alt="Cover image"  />
-              Twitter
+            <div className="">
+              <Link href="#">
+                <a href="#" className="flex flex-col items-center">
+                  <img className="w-1/5 rounded-md" src="../assets/img/twitter-blue.svg" alt="Cover image"  />
+                  Twitter
+                </a>
+              </Link>
             </div>
             <div className="flex flex-col items-center">
               <img className="w-1/5 rounded-md" src="../assets/img/telegram-blue.svg" alt="Cover image"  />
