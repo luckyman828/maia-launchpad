@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { useWalletModal, useWeb3 } from "@react-dapp/wallet";
+import { useWalletModal, useWeb3, wallets } from "@react-dapp/wallet";
 import { useWeb3React} from '@web3-react/core'
 
 export default function Header() {
@@ -29,8 +29,16 @@ export default function Header() {
                     <div className="flex space-x-4 ml-2">
                         <a onClick={() => account ? deactivate() : setOpen(true)} href="#" className="bg-gray-100 border-2 text-gray-100 bg-blue-700 h-9 px-3 py-2 rounded-md text-xs flex items-center justify-between" aria-current="page">
                             <img className="opacity-75 block h-8 w-3 mr-3" src="../assets/img/connect.svg" alt="logo"/>
-                            {account ? 'Disconnect' : 'Connect'}
+                            {account ? "Disconnect" : 'Connect'}
                         </a>
+                        { 
+                        account ? (
+                            <div className="bg-gray-100 border-2 text-gray-100 bg-blue-700 h-9 px-3 py-2 rounded-md text-xs flex items-center justify-between" aria-current="page">
+                                {account.substring(0, 5) + "..." }
+                            </div>
+                            ) : ("")
+                        
+                        }
                     </div>
                 </div>
             </div>

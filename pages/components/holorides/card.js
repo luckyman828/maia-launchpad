@@ -24,7 +24,7 @@ export default function Card(props) {
             <div className="text-xs font-normal text-gray-400 mb-2">
                 {
                     props.keyInvestor ? (
-                        <Link href={props.link}><a className="text-blue-400" href="">{props.name} </a></Link>
+                        <Link href={props.link}><a className="text-blue-400" href="">{props.name}   </a></Link>
                     ) : ("")
                 }
                 {props.service}
