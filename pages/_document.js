@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+           
         </Head>
         <body>
           <Main />
