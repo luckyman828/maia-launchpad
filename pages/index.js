@@ -1,15 +1,21 @@
-import Link from "next/link"
+import Link from "next/link";
+import ReactTypingEffect from 'react-typing-effect';
 
 
 export default function Home() {
   return (
     <div className="mt-24">
       <div className="flex flex-col justify-center">
-        <div className="flex justify-center">
-          <h2 className="text-4xl text-gray-600">Technology Is The Fundamental Driver For </h2>
-          <div className="text-4xl text-gray-600 mx-2" data-testid="typewriter-wrapper">
+        <div className="2xl:flex 2xl:justify-center xl:flex xl:justify-center text-center">
+          <h2 className="text-4xl text-gray-600">Technology Is The Fundamental Driver For </h2>&nbsp;
+          
+          <ReactTypingEffect className="text-4xl text-gray-600"
+            text={[" Growth", " Progress"]}
+          />
+
+          {/* <div className="text-4xl text-gray-600 mx-2" data-testid="typewriter-wrapper">
             <span className="Typewriter__wrapper"> Evolution</span><span className="Typewriter__cursor">|</span>
-          </div>
+          </div> */}
         </div>
         <div className="flex text-xl text-gray-400 justify-center mt-10"><p>We back determined teams, solving hard problems, with global impact.<br/>
           Raise funds, build a community, deliver a technology that improves the world.</p>
