@@ -1,6 +1,11 @@
 import Link from "next/link"
+import { useWalletModal, useWeb3 } from "@react-dapp/wallet";
+import { useWeb3React} from '@web3-react/core'
 
 export default function Header() {
+    const { setOpen, deactivate, error: walletError } = useWalletModal();
+    const { account, connector } = useWeb3React()
+
     return (
         
         <nav className="bg-gray-100 border-b-2 border-gray-200 h-20 flex items-center main-nav">
@@ -22,9 +27,9 @@ export default function Header() {
                         </Link>
                     </div>
                     <div className="flex space-x-4 ml-2">
-                        <a href="#" className="bg-gray-100 border-2 text-gray-100 bg-blue-700 h-9 px-3 py-2 rounded-md text-xs flex items-center justify-between" aria-current="page">
+                        <a onClick={() => account ? deactivate() : setOpen(true)} href="#" className="bg-gray-100 border-2 text-gray-100 bg-blue-700 h-9 px-3 py-2 rounded-md text-xs flex items-center justify-between" aria-current="page">
                             <img className="opacity-75 block h-8 w-3 mr-3" src="../assets/img/connect.svg" alt="logo"/>
-                            Connect
+                            {account ? 'Disconnect' : 'Connect'}
                         </a>
                     </div>
                 </div>
