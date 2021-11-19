@@ -5,7 +5,7 @@ export default function Card(props) {
     
     return (
         <div className="w-full flex flex-col justify-center items-center mx-3 border-2 p-4 shadow-lg rounded-md">
-            <div>
+            <div className="w-32 mx-auto">
                 <img className="" src={props.img_url} alt="Cover image"/>
             </div>
             

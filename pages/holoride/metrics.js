@@ -5,6 +5,8 @@ import { Fragment, useState } from 'react'
 import Card from '../components/holorides/Card'
 // import Chart from "react-apexcharts";
 import { Doughnut } from 'react-chartjs-2';
+import { useWalletModal, useWeb3, wallets } from "@react-dapp/wallet";
+import { useWeb3React} from '@web3-react/core'
 
 
 
@@ -22,6 +24,9 @@ export default function Metrics() {
   function openModal() {
     setIsOpen(true)
   }
+
+  const { setOpen, deactivate, error: walletError } = useWalletModal();
+  const { account, connector } = useWeb3React()
 
   const DATA_COUNT = 5;
   const NUMBER_CFG = {count: DATA_COUNT, min: 0, max: 100};
@@ -632,10 +637,10 @@ export default function Metrics() {
             <Chart options={chatOptions} series={chatSeries} type="donut" width="380"/>
           </div> */}
 
-          <div className="justify-self-center w-2/3 sm:full m-auto">
+          <div className="justify-self-center w-4/5 sm:full mx-auto h-64 w-96 mt-5">
             <Doughnut data={chartData} options= {{
-              layout: {
-              },
+              
+              maintainAspectRatio: false,
               plugins: {
                 legend: {
                       title: {
@@ -660,41 +665,71 @@ export default function Metrics() {
           </div>
 
           <div className="border-2 grid grid-cols-4 sm:grid-cols-3 gap-4 p-4 rounded-md">
-            <div className="">
+            <div className="w-1/5 mx-auto">
               <Link href="#">
-                <a href="#" className="flex flex-col items-center">
-                  <img className="w-1/5 rounded-md" src="../assets/img/twitter-blue.svg" alt="Cover image"  />
+                <a href="#" className="flex flex-col items-center hover:text-blue-700">
+                  <img className="w-full rounded-md" src="../assets/img/twitter-blue.svg" alt="Cover image"  />
                   Twitter
                 </a>
               </Link>
             </div>
-            <div className="flex flex-col items-center">
-              <img className="w-1/5 rounded-md" src="../assets/img/telegram-blue.svg" alt="Cover image"  />
-              Telegram
+            <div className="w-1/5 mx-auto">
+                <Link href="#">
+                  <a href="#" className="flex flex-col items-center hover:text-blue-700">
+                    <img className="w-full rounded-md" src="../assets/img/telegram-blue.svg" alt="Cover image"  />
+                    Telegram
+                  </a>
+              </Link>
             </div>
-            <div className="flex flex-col items-center">
-              <img className="w-1/5 rounded-md" src="../assets/img/blog-blue.svg" alt="Cover image"  />
-              Blog
+            <div className="w-1/5 mx-auto">
+                <Link href="#">
+                  <a href="#" className="flex flex-col items-center hover:text-blue-700">
+                    <img className="w-full rounded-md" src="../assets/img/blog-blue.svg" alt="Cover image"  />
+                    Blog
+                  </a>
+              </Link>
             </div>
-            <div className="flex flex-col items-center">
-              <img className="w-1/5 rounded-md" src="../assets/img/announcement-blue.svg" alt="Cover image"  />
-              Announcements
+            <div className="w-1/5 mx-auto">
+                <Link href="#">
+                  <a href="#" className="flex flex-col items-center hover:text-blue-700">
+                    <img className="w-full rounded-md" src="../assets/img/announcement-blue.svg" alt="Cover image"  />
+                    Announcements
+                  </a>
+              </Link>
             </div>
-            <div className="flex flex-col items-center">
-              <img className="w-1/5 rounded-md" src="../assets/img/instagram-blue.svg" alt="Cover image"  />
-              Instagram
+            <div className="w-1/5 mx-auto">
+                <Link href="#">
+                  <a href="#" className="flex flex-col items-center hover:text-blue-700">
+                    <img className="w-full rounded-md" src="../assets/img/instagram-blue.svg" alt="Cover image"  />
+                    Instagram
+                  </a>
+              </Link>
             </div>
-            <div className="flex flex-col items-center">
-              <img className="w-1/5 rounded-md mt-0.5 mb-0.5" src="../assets/img/facebook-blue.svg" alt="Cover image"  />
-              Facebook
+            <div className="w-1/5 mx-auto">
+                <Link href="#">
+                  <a href="#" className="flex flex-col items-center hover:text-blue-700">
+                    <img className="w-full rounded-md m-0.5" src="../assets/img/facebook-blue.svg" alt="Cover image"  />
+                    Facebook
+                  </a>
+              </Link>
             </div>
-            <div className="flex flex-col items-center">
-              <img className="w-1/5 rounded-md" src="../assets/img/linkedin-blue.svg" alt="Cover image"  />
-              Linkedin
+            <div className="w-1/5 mx-auto">
+                <Link href="#">
+                  <a href="#" className="flex flex-col items-center hover:text-blue-700">
+                    <img className="w-full rounded-md " src="../assets/img/linkedin-blue.svg" alt="Cover image"  />
+                    Linkedin
+                  </a>
+              </Link>
             </div>
-            <div className="flex flex-col items-center">
-              <img className="w-1/5 rounded-md mt-1 mb-1" src="../assets/img/youtube-blue.svg" alt="Cover image"  />
-              Youtube
+            
+            
+            <div className="w-1/5 mx-auto">
+                <Link href="#">
+                  <a href="#" className="flex flex-col items-center hover:text-blue-700">
+                    <img className="w-full rounded-md m-1" src="../assets/img/youtube-blue.svg" alt="Cover image"  />
+                    Youtube
+                  </a>
+              </Link>
             </div>
           </div>
 
@@ -707,7 +742,7 @@ export default function Metrics() {
                 <div className="rounded-full p-1 border-blue-700 bg-blue-700"></div>
                 <div className="pl-2 text-lg">
                   <Link href="#">
-                    <a>Website</a>
+                    <a className="hover:underline">Website</a>
                   </Link>
                 </div>
             </div>
@@ -716,7 +751,7 @@ export default function Metrics() {
                 <div className="rounded-full p-1 border-blue-700 bg-blue-700"></div>
                 <div className="pl-2 text-lg">
                   <Link href="#">
-                    <a>Litepaper</a>
+                    <a className="hover:underline">Litepaper</a>
                   </Link>
                 </div>
             </div>
@@ -725,7 +760,7 @@ export default function Metrics() {
                 <div className="rounded-full p-1 border-blue-700 bg-blue-700"></div>
                 <div className="pl-2 text-lg">
                   <Link href="#">
-                    <a>Creator Space</a>
+                    <a className="hover:underline">Creator Space</a>
                   </Link>
                 </div>
             </div>
@@ -734,7 +769,7 @@ export default function Metrics() {
           
           <div className="text-holoride mt-5 flex justify-center mt-5 mb-5">
               <Link href="/holoride/metrics">
-                <a href="#" className="bg-gray-100 text-gray-100 bg-blue-700 lg:h-12 px-3 py-2 rounded-md text-sm flex items-center w-52 flex justify-center" aria-current="page">
+                <a href="#" onClick={() => setOpen(true)} className="bg-gray-100 text-gray-100 bg-blue-700 lg:h-12 px-3 py-2 rounded-md text-sm flex items-center w-52 flex justify-center" aria-current="page">
                   <img className="opacity-75 block h-8 w-3 mr-3" src="../assets/img/connect.svg" alt="logo"/>
                   Register Now
                 </a>

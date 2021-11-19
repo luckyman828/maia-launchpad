@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Tab } from '@headlessui/react'
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
-import Card from '../components/holorides/Card'
+import { useWalletModal, useWeb3, wallets } from "@react-dapp/wallet";
 
 
 
@@ -22,65 +22,7 @@ export default function Metrics() {
     setIsOpen(true)
   }
 
-  const chatSeries = [23, 11, 54, 72, 12]
-  // const chatLabels = ["Public Sale", "Community", "Ecosystem", "Treasury", "Equity investors"]
-  const chatOptions = {
-    chart: {
-      type: 'donut',
-    },
-    responsive: [{
-      breakpoint: 480,
-      options: {
-        chart: {
-          width: 200
-        },
-        legend: {
-          position: 'bottom'
-        },
-        labels: ["Comedy", "Action", "SciFi", "Drama", "Horror"],
-      }
-    }]
-  }
-
-  const member = {
-    img_url : "../assets/img/dirk-ahlborn.png",
-    name : "Dirk-ahlborn",
-    stuff : "Co-founder & hief Executive Officer",
-    service : "Served as Managing Director of one of Europe’s leading market-listed digital agencies. Former Head of Digital Business at German premium car manufacturer Audi. Nils was named “Rising Star 2020” by Automotive News Europe.",
-    contactInfo : {
-      twitter : "#",
-      linkedin : "#"
-    }, 
-  }
-
-  const advisor = {
-    img_url : "../assets/img/advisor.png",
-    name : "Anthony & Joseph Russo",
-    stuff : "Directors, Avengers: Infinity War & Endgame",
-    service : "The Russo Brothers are American film and TV directors best known for their four installments in the Marvel Cinematic Universe, including Avengers: Infinity War (2018) and Endgame (2019). They advise holoride from an entertainment and storytelling perspective.",
-    contactInfo : {
-      twitter : "#",
-      linkedin : "#"
-    }, 
-  }
-
-  const investor = {
-    img_url : "../assets/img/terranet-ab.png",
-    name : "Terranet AB",
-    service : "The Russo Brothers are American film and TV directors best known for their four installments in the Marvel Cinematic Universe, including Avengers: Infinity War (2018) and Endgame (2019). They advise holoride from an entertainment and storytelling perspective.",
-    link : {
-      url  : "#"
-    } 
-  }
-
-  const keyInvestor = {
-    img_url : "../assets/img/signum-capital.png",
-    name : "Signum Capital",
-    service : "supports game-changing projects that advance us towards the future of blockchain-enabled socioeconomic transformation.",
-    link : {
-      url  : "#"
-    }
-  }
+  const { setOpen, deactivate, error: walletError } = useWalletModal();
 
   return (
     
@@ -690,7 +632,7 @@ export default function Metrics() {
               Register Now
             </div>
             <div className="mb-5">
-              <a href="#" className="text-sm bg-gray-100 border-2 text-gray-100 bg-blue-700 h-10 px-3 py-2 rounded-md text-xs flex items-center justify-center" aria-current="page">
+              <a href="#" onClick={() => setOpen(true)}className="text-sm bg-gray-100 border-2 text-gray-100 bg-blue-700 h-10 px-3 py-2 rounded-md text-xs flex items-center justify-center" aria-current="page">
                   <img className="opacity-75 block h-8 w-3 mr-3" src="../assets/img/connect.svg" alt="logo"/>
                   Connect
               </a>
