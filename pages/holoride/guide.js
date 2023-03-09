@@ -3,7 +3,7 @@ import { Tab } from '@headlessui/react'
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import { useWalletModal, useWeb3, wallets } from "@react-dapp/wallet";
-
+import Image from 'next/image'
 
 
 
@@ -32,16 +32,16 @@ export default function Metrics() {
         <div className="px-10 border-b-2">
           
           <div className="flex justify-center mt-5 mb-5">
-            <img className="w-30 " src="../assets/img/holoride.png" alt="Cover image"  />
+            <Image className="w-30 " src="../assets/img/holoride.png" alt="Cover image"  />
           </div>
           <div className="flex justify-center mt-5 mb-5 text-center text-gray-600 text-holoride">
             Audi-backed holoride To Transform Every Car Ride Into The Ultimate<br/> Entertainment Experience Via Extended Reality And NFTs On The <br/>Elrond Blockchain
           </div>
           <div className="flex justify-center mt-5 mb-20">
-            <a href="#" className="mx-5 opacity-75 hover:bg-gray-300 rounded-full p-2.5 flex justify-center"><img className="block h-4 w-auto" src="../assets/img/twitter.svg" alt="Workflow"/></a>
-            <a href="#" className="mx-5 opacity-75 hover:bg-gray-300 rounded-full p-2.5 flex justify-center"><img className="block h-4 w-auto" src="../assets/img/telegram.svg" alt="Workflow"/></a>
-            <a href="#" className="mx-5 opacity-75 hover:bg-gray-300 rounded-full p-2.5 flex justify-center"><img className="block h-4 w-auto" src="../assets/img/facebook.svg" alt="Workflow"/></a>
-            <a href="#" className="mx-5 opacity-75 hover:bg-gray-300 rounded-full p-2.5 flex justify-center"><img className="block h-4 w-auto" src="../assets/img/linkedin.svg" alt="Workflow"/></a>
+            <a href="#" className="mx-5 opacity-75 hover:bg-gray-300 rounded-full p-2.5 flex justify-center"><Image className="block h-4 w-auto" src="../assets/img/twitter.svg" alt="Workflow"/></a>
+            <a href="#" className="mx-5 opacity-75 hover:bg-gray-300 rounded-full p-2.5 flex justify-center"><Image className="block h-4 w-auto" src="../assets/img/telegram.svg" alt="Workflow"/></a>
+            <a href="#" className="mx-5 opacity-75 hover:bg-gray-300 rounded-full p-2.5 flex justify-center"><Image className="block h-4 w-auto" src="../assets/img/facebook.svg" alt="Workflow"/></a>
+            <a href="#" className="mx-5 opacity-75 hover:bg-gray-300 rounded-full p-2.5 flex justify-center"><Image className="block h-4 w-auto" src="../assets/img/linkedin.svg" alt="Workflow"/></a>
           </div>
         </div>
         <div className="px-10 ">
@@ -60,7 +60,7 @@ export default function Metrics() {
                     >
                      <Link href="/holoride">
                         <a href="#" className="h-9 px-3 py-2 rounded-md text-sm flex items-center" aria-current="page">
-                            <img className="block h-8 w-5 mr-3 opacity-70" src="../assets/img/rationale.svg" alt="logo"/>
+                            <Image className="block h-8 w-5 mr-3 opacity-70" src="../assets/img/rationale.svg" alt="logo"/>
                               Rationale
                         </a>
                       </Link>
@@ -76,7 +76,7 @@ export default function Metrics() {
                     >
                       <Link href="/holoride/metrics">
                         <a href="#" className="h-9 px-3 py-2 rounded-md text-sm flex items-center" aria-current="page">
-                            <img className="block h-8 w-5 mr-3 opacity-70" src="../assets/img/metrics.svg" alt="logo"/>
+                            <Image className="block h-8 w-5 mr-3 opacity-70" src="../assets/img/metrics.svg" alt="logo"/>
                               Metrics
                         </a>
                       </Link>
@@ -92,7 +92,7 @@ export default function Metrics() {
                     >
                       <Link href="/holoride/guide">
                         <a href="#" className="h-9 px-3 py-2 rounded-md text-sm flex items-center" aria-current="page">
-                            <img className="block h-8 w-5 mr-3 opacity-70" src="../assets/img/guide-active.svg" alt="logo"/>
+                            <Image className="block h-8 w-5 mr-3 opacity-70" src="../assets/img/guide-active.svg" alt="logo"/>
                               How to Guide
                         </a>
                       </Link>
@@ -354,7 +354,7 @@ export default function Metrics() {
                 <div className="pl-2 text-lg">22 November 2021</div>
                 <div className="pl-2 text-sm text-gray-500">EGLD Holdings Calculation Day</div>
                 <div className="pl-2 text-sm text-gray-500">
-                Staking and delegation amount snapshot for addresses that passed the KYC. During this day, users' EGLD amount staked or delegated will be recorded at a random time. Your amount of EGLD staked or delegated for that address will determine the Tier and number of tickets that you will be able to buy. Please note that EGLD not staked or delegated will NOT count towards your EGLD holdings calculation.
+                Staking and delegation amount snapshot for addresses that passed the KYC. During this day, users&apos; EGLD amount staked or delegated will be recorded at a random time. Your amount of EGLD staked or delegated for that address will determine the Tier and number of tickets that you will be able to buy. Please note that EGLD not staked or delegated will NOT count towards your EGLD holdings calculation.
                 </div>
               </div>
             </div>
@@ -469,7 +469,7 @@ export default function Metrics() {
           <div className="text-holoride mt-5 flex justify-center mt-15 mb-5">
               <Link href="/holoride/metrics">
                 <a href="#" className="bg-gray-100 text-gray-100 bg-blue-700 lg:h-12 px-3 py-2 rounded-md text-sm flex items-center w-52 flex justify-center" aria-current="page">
-                  <img className="opacity-75 block h-8 w-3 mr-3" src="../assets/img/connect.svg" alt="logo"/>
+                  <Image className="opacity-75 block h-8 w-3 mr-3" src="../assets/img/connect.svg" alt="logo"/>
                   Register Now
                 </a>
               </Link>
@@ -481,7 +481,7 @@ export default function Metrics() {
         <div className="bg-gray-50 border-r-2 border-l-2 border-b-2 rounded-md shadow-2xl">
           <div className="px-1 border-b-2">
             <div className="shadow-lg">
-              <img className="w-full rounded-md" src="../assets/img/announcement.jpg" alt="Cover image"  />
+              <Image className="w-full rounded-md" src="../assets/img/announcement.jpg" alt="Cover image"  />
             </div>
           </div>
           <div className="px-3 border-b-2">
@@ -517,7 +517,7 @@ export default function Metrics() {
                   className="w-full flex items-center justify-center rounded-md border-2 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
                 >
                   
-                      <img className="block h-8 w-3 mr-3" src="../assets/img/eligibility.svg" alt="logo"/>
+                      <Image className="block h-8 w-3 mr-3" src="../assets/img/eligibility.svg" alt="logo"/>
                       Eligibility Tiers
                   
                 </button>
@@ -633,7 +633,7 @@ export default function Metrics() {
             </div>
             <div className="mb-5">
               <a href="#" onClick={() => setOpen(true)}className="text-sm bg-gray-100 border-2 text-gray-100 bg-blue-700 h-10 px-3 py-2 rounded-md text-xs flex items-center justify-center" aria-current="page">
-                  <img className="opacity-75 block h-8 w-3 mr-3" src="../assets/img/connect.svg" alt="logo"/>
+                  <Image className="opacity-75 block h-8 w-3 mr-3" src="../assets/img/connect.svg" alt="logo"/>
                   Connect
               </a>
             </div>
