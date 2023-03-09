@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Tab } from '@headlessui/react'
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
-import Card from '../components/holorides/Card'
+import Card from '../components/holorides/card'
 import YoutubeEmbed from "../components/YoutubeEmbed";
 // import Chart from "react-apexcharts";
 import { Doughnut } from 'react-chartjs-2';
