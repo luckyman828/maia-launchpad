@@ -3,6 +3,7 @@ import { Tab } from '@headlessui/react'
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import Card from '../components/holorides/Card'
+import YoutubeEmbed from "../components/YoutubeEmbed";
 // import Chart from "react-apexcharts";
 import { Doughnut } from 'react-chartjs-2';
 import { useWalletModal, useWeb3, wallets } from "@react-dapp/wallet";
@@ -211,7 +212,8 @@ export default function Metrics() {
           </div>
           
           <div className="">
-            <img className="w-full rounded-md" src="../assets/img/cover-1.jpg" alt="Cover image"  />
+            <YoutubeEmbed className="w-full " embedId="DTSwWV7l8b4" /> 
+            {/* <img className="w-full rounded-md" src="../assets/img/cover-1.jpg" alt="Cover image"  /> */}
           </div>
           
           <div className="text-holoride mt-5">
@@ -782,6 +784,7 @@ export default function Metrics() {
         <div className="bg-gray-50 border-r-2 border-l-2 border-b-2 rounded-md shadow-2xl">
           <div className="px-1 border-b-2">
             <div className="shadow-lg">
+              {/* <YoutubeEmbed className="w-full " embedId="rokGy0huYEA" />  */}
               <img className="w-full rounded-md" src="../assets/img/announcement.jpg" alt="Cover image"  />
             </div>
           </div>

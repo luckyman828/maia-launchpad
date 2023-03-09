@@ -220,8 +220,8 @@ export default function Holoride() {
                   className="w-full flex items-center justify-center rounded-md border-2 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
                 >
                   
-                      <img className="block h-8 w-3 mr-3" src="../assets/img/eligibility.svg" alt="logo"/>
-                      Eligibility Tiers
+                  <img className="block h-8 w-3 mr-3" src="../assets/img/eligibility.svg" alt="logo"/>
+                  Eligibility Tiers
                   
                 </button>
               </div>
